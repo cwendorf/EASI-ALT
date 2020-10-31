@@ -1,0 +1,123 @@
+> # Estimation Approach to Statistical Inferenence (EASI)
+> ## Alternate Basic Functions (Estimate, Test, and Plot)
+> ## TO INSTALL, SIMPLY COPY AND PASTE CONTENTS OF THIS ENTIRE FILE INTO R
+> 
+> ### Source the alt-EASI Functions
+> 
+> source("http://raw.githubusercontent.com/cwendorf/EASI-DEV/master/A-Functions/ALL-ALTEASI-FUNCTIONS.R")
+> 
+> ### Three Time Period Example Data
+> 
+> Time1 <- c(5,6,6,7,8)
+> Time2 <- c(7,7,8,8,9)
+> Time3 <- c(8,8,9,9,9)
+> 
+> MyData <- data.frame(Time1,Time2,Time3)
+> MyData
+
+  Time1 Time2 Time3
+1     5     7     8
+2     6     7     8
+3     6     8     9
+4     7     8     9
+5     8     9     9
+> 
+> ### Analyses of Multiple Variables
+> ### (equivalent to one-sample analyses for each level of a factor)
+> 
+> #### Confidence Intervals for the Means
+> 
+> alt.estimateMeans(Time1,Time2,Time3)
+
+CONFIDENCE INTERVALS FOR THE MEANS
+
+      N   M    SD    SE    LL    UL
+Time1 5 6.4 1.140 0.510 4.984 7.816
+Time2 5 7.8 0.837 0.374 6.761 8.839
+Time3 5 8.6 0.548 0.245 7.920 9.280
+
+> alt.estimateMeans(Time1,Time2,Time3,conf.level=.99)
+
+CONFIDENCE INTERVALS FOR THE MEANS
+
+      N   M    SD    SE    LL    UL
+Time1 5 6.4 1.140 0.510 4.052 8.748
+Time2 5 7.8 0.837 0.374 6.077 9.523
+Time3 5 8.6 0.548 0.245 7.472 9.728
+
+> 
+> #### Plots of Confidence Intervals for the Means
+> 
+> alt.plotMeans(Time1,Time2,Time3)
+> alt.plotMeans(Time1,Time2,Time3,conf.level=.99,mu=6)
+> 
+> #### Significance Tests for the Means
+> 
+> alt.testMeans(Time1,Time2,Time3)
+
+HYPOTHESIS TESTS FOR THE MEANS
+
+      Diff    SE      t df p
+Time1  6.4 0.510 12.551  4 0
+Time2  7.8 0.374 20.846  4 0
+Time3  8.6 0.245 35.109  4 0
+
+> alt.testMeans(Time1,Time2,Time3,mu=6)
+
+HYPOTHESIS TESTS FOR THE MEANS
+
+      Diff    SE      t df     p
+Time1  0.4 0.510  0.784  4 0.477
+Time2  1.8 0.374  4.811  4 0.009
+Time3  2.6 0.245 10.614  4 0.000
+
+> 
+> ### Analyses of a Variable Comparison
+> ### (equivalent to analyses for two levels of a factor)
+> 
+> #### Confidence Interval for the Mean Difference
+> 
+> alt.estimateDifference(Time1,Time2)
+
+CONFIDENCE INTERVAL FOR THE COMPARISON
+
+  Diff     SE     df     LL     UL 
+-1.400  0.245  4.000 -2.080 -0.720 
+
+> alt.estimateDifference(Time1,Time2,conf.level=.99)
+
+CONFIDENCE INTERVAL FOR THE COMPARISON
+
+  Diff     SE     df     LL     UL 
+-1.400  0.245  4.000 -2.080 -0.720 
+
+> alt.estimateDifference(Time3,Time1)
+
+CONFIDENCE INTERVAL FOR THE COMPARISON
+
+ Diff    SE    df    LL    UL 
+2.200 0.374 4.000 1.161 3.239 
+
+> 
+> #### Plots of Confidence Intervals for the Mean Difference
+> 
+> alt.plotDifference(Time1,Time2)
+> alt.plotDifference(Time1,Time2,conf.level=.99)
+> 
+> #### Significance Test for the Mean Difference
+> 
+> alt.testDifference(Time1,Time2)
+
+HYPOTHESIS TEST FOR THE COMPARISON
+
+  Diff     SE      t     df      p 
+-1.400  0.245 -5.715  4.000  0.005 
+
+> alt.testDifference(Time1,Time2,mu=-2)
+
+HYPOTHESIS TEST FOR THE COMPARISON
+
+  Diff     SE      t     df      p 
+-1.400  0.245  2.449  4.000  0.070 
+
+> 
