@@ -1,10 +1,10 @@
-# altEASI
+# EASI-ALT
 
 ## The Other Version of EASI
 
 ### Overview
 
-**altEASI** is an R package that implements features of estimation statistics (or the "new statistics"). It only uses raw data input (no summary statistics input), but has some other features that [**EASI**](https://cwendorf.github.io/EASI/) does not yet have. It is mostly a wrapper for built-in R functions and exists as a proof of concept before I develop the functions for [**EASI**](https://cwendorf.github.io/EASI/).
+**EASI-ALt** is an R package that implements features of estimation statistics. It only uses raw data input (no summary statistics input), but has some other features that [**EASI**](https://cwendorf.github.io/EASI/) does not yet have. It is mostly a wrapper for built-in R functions and exists as a proof of concept before I develop the functions for [**EASI**](https://cwendorf.github.io/EASI/).
 
 ### Installation
 
@@ -12,14 +12,14 @@ This package is not currently on CRAN, but can be installed directly from the re
 
 ``` r
 install.packages("devtools")
-devtools::install_github("cwendorf/altEASI")
+devtools::install_github("cwendorf/EASI-ALT")
 library(altEASI)
 ```
 
 If you do not wish a full install, the functions can be sourced instead:
 
 ```r
-source("http://raw.githubusercontent.com/cwendorf/altEASI/master/source-altEASI.R")
+source("http://raw.githubusercontent.com/cwendorf/altEASI/master/sourceEASI-ALT.R")
 ```
 
 ### Usage
@@ -32,6 +32,6 @@ The following vignettes are offered as tutorials. They show both the default out
 
 ### Contact Me
 
-- GitHub Issues: [https://github.com/cwendorf/altEASI/issues](https://github.com/cwendorf/altEASI/issues) 
+- GitHub Issues: [https://github.com/cwendorf/EASI-ALT/issues](https://github.com/cwendorf/EASI-ALT/issues) 
 - Author Email: [cwendorf@uwsp.edu](mailto:cwendorf@uwsp.edu)
 - Author Homepage: [https://cwendorf.github.io](https://cwendorf.github.io)
