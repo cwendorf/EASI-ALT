@@ -19,7 +19,7 @@ library(altEASI)
 If you do not wish a full install, the functions can be sourced instead:
 
 ```r
-source("http://raw.githubusercontent.com/cwendorf/altEASI/master/sourceEASI-ALT.R")
+source("http://raw.githubusercontent.com/cwendorf/EASI-ALT/master/sourceEASI-ALT.R")
 ```
 
 ### Usage
