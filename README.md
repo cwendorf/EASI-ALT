@@ -32,6 +32,6 @@ The following vignettes are offered as tutorials. They show both the default out
 
 ### Contact Me
 
-- GitHub Issues: [https://github.com/cwendorf/EASI-ALT/issues](https://github.com/cwendorf/EASI-ALT/issues) 
+- GitHub Issues: [https://github.com/cwendorf/EASIalt/issues](https://github.com/cwendorf/EASIalt/issues) 
 - Author Email: [cwendorf@uwsp.edu](mailto:cwendorf@uwsp.edu)
 - Author Homepage: [https://cwendorf.github.io](https://cwendorf.github.io)
