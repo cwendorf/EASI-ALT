@@ -1,6 +1,6 @@
 # EASIalt
 
-## The Other Version of EASI
+## The Alternative Version of EASI
 
 ### Overview
 
