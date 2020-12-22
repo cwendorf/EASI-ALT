@@ -19,7 +19,7 @@ library(EASIalt)
 If you do not wish a full install, the functions can be sourced instead:
 
 ```r
-source("http://raw.githubusercontent.com/cwendorf/EASI-ALT/master/sourceEASIalt.R")
+source("http://raw.githubusercontent.com/cwendorf/EASIalt/master/sourceEASIalt.R")
 ```
 
 ### Usage
