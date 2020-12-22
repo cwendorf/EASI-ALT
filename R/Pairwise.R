@@ -124,7 +124,7 @@ cipPairwise <- function(x,...)
 cipPairwise.default <- function(...,mu=NULL) {
   main <- "Confidence Intervals for the Pairwise Comparisons"
   ylab <- "Mean Difference"
-  xlab <- "Pairwise Comparisons"
+  xlab <- ""
   results <- ciPairwise(...)[,c(1,4,5)]
   .ciPlot(results,main,ylab,xlab,mu)
 } 
@@ -132,7 +132,7 @@ cipPairwise.default <- function(...,mu=NULL) {
 cipPairwise.formula <- function(formula,conf.level=.95,mu=NA,...) {
   main <- "Confidence Intervals for the Pairwise Comparisons"
   ylab <- "Mean Difference"
-  xlab <- "Pairwise Comparisons"
+  xlab <- ""
   results <- ciPairwise(formula,...)[,c(1,4,5)]
   .ciPlot(results,main,ylab,xlab,mu)
 } 

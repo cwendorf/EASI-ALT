@@ -52,8 +52,8 @@ cipRegression <- function(x,...)
 
 cipRegression.formula <- function(formula,mu=NULL,conf.level=.95,...) {
   main <- "Regression Coefficients"
-  ylab <- "Unstandardized"
-  xlab <- "Coefficients"
+  ylab <- "Unstandardized Coefficient"
+  xlab <- ""
   results <- ciRegression(formula,conf.level=conf.level,...)[,c(1,3,4)]
   .ciPlot(results,main,ylab,xlab,mu)
 }

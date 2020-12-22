@@ -53,7 +53,7 @@ cipMeans <- function(x,...)
 cipMeans.default <- function(...,conf.level=.95,mu=NULL){
   main <- "Confidence Intervals for the Means"
   ylab <- "Outcome"
-  xlab <- "Variables"
+  xlab <- ""
   results <- ciMeans(...,conf.level=conf.level)[,c(2,5,6)]
   .ciPlot(results,main,ylab,xlab,mu)
 }
@@ -61,7 +61,7 @@ cipMeans.default <- function(...,conf.level=.95,mu=NULL){
 cipMeans.formula <- function(formula,mu=NULL,...){
   main <- "Confidence Intervals for the Means"
   ylab <- all.vars(formula)[1]
-  xlab <- all.vars(formula)[2]
+  xlab <- ""
   results <- ciMeans(formula,...)[,c(2,5,6)]
   x <- eval(formula[[3]])
   y <- eval(formula[[2]])

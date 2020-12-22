@@ -72,7 +72,7 @@ cipContrasts <- function(x,...)
 cipContrasts.default <- function(...,mu=NULL) {
   main <- "Confidence Intervals for the Contrasts"
   ylab <- "Mean Difference"
-  xlab <- "Contrasts"
+  xlab <- ""
   results <- ciContrasts(...)[,c(1,3,4)]
   .ciPlot(results,main,ylab,xlab,mu)
 }  
@@ -80,7 +80,7 @@ cipContrasts.default <- function(...,mu=NULL) {
 cipContrasts.formula <- function(formula,mu=NULL,...) {
   main <- "Confidence Intervals for the Contrasts"
   ylab <- "Mean Difference"
-  xlab <- "Contrasts"
+  xlab <- ""
   results <- ciContrasts(formula,...)[,c(1,3,4)]
   .ciPlot(results,main,ylab,xlab,mu)
 }

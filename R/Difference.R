@@ -65,7 +65,7 @@ cipDifference <- function(x,...)
 cipDifference.default <- function(...){
   main <- "Confidence Intervals for the Comparison"
   ylab <- "Outcome"
-  xlab <- "Variables"
+  xlab <- ""
   Vars <- ciMeans(...)[2:1,c(2,5,6)]
   Diff <- ciDifference(...)[c(1,4,5)]
   results <- rbind(Vars,Diff)
@@ -78,7 +78,7 @@ cipDifference.default <- function(...){
 cipDifference.formula <- function(formula,...){
   main <- "Confidence Intervals for the Comparison"
   ylab <- all.vars(formula)[1]
-  xlab <- all.vars(formula)[2]
+  xlab <- ""
   Groups <- ciMeans(formula,...)
   Groups <- Groups[2:1,c(2,5,6)]
   Diff <- ciDifference(formula,...)[c(1,4,5)]
