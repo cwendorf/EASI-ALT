@@ -102,5 +102,5 @@ export(cipRegression)
 S3method(ciHSD,formula)
 export(ciHSD)
 
-S3method(ciHSD,formula)
+S3method(nhstHSD,formula)
 export(nhstHSD)
