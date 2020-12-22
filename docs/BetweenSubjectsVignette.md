@@ -1,7 +1,7 @@
 ---
 title: "Estimation Approach to Statistical Inference"
 author: "Craig A. Wendorf"
-date: "2020-10-18"
+date: "2020-12-22"
 output: 
   rmarkdown::html_vignette:
     keep_md: TRUE
@@ -121,8 +121,8 @@ ciDifference(Outcome~Comparison)
 ```
 
 ```
-##   Diff     SE     df     LL     UL 
-## -4.000  0.816  4.000 -6.267 -1.733
+##            Diff    SE df     LL     UL
+## Comparison   -4 0.816  4 -6.267 -1.733
 ```
 
 ```r
@@ -130,8 +130,8 @@ ciDifference(Outcome~Comparison,conf.level=.99)
 ```
 
 ```
-##   Diff     SE     df     LL     UL 
-## -4.000  0.816  4.000 -6.267 -1.733
+##            Diff    SE df     LL     UL
+## Comparison   -4 0.816  4 -6.267 -1.733
 ```
 
 ```r
@@ -140,8 +140,8 @@ ciDifference(Outcome~Comparison)
 ```
 
 ```
-##  Diff    SE    df    LL    UL 
-## 5.000 0.816 4.000 2.733 7.267
+##            Diff    SE df    LL    UL
+## Comparison    5 0.816  4 2.733 7.267
 ```
 
 #### Plot of the Confidence Interval for the Mean Difference
@@ -168,8 +168,8 @@ nhstDifference(Outcome~Comparison)
 ```
 
 ```
-##   Diff     SE      t     df      p 
-## -4.000  0.816 -4.899  4.000  0.008
+##            Diff    SE      t df     p
+## Comparison   -4 0.816 -4.899  4 0.008
 ```
 
 ```r
@@ -177,8 +177,8 @@ nhstDifference(Outcome~Comparison,mu=2)
 ```
 
 ```
-##   Diff     SE      t     df      p 
-## -6.000  0.816 -7.348  4.000  0.002
+##            Diff    SE      t df     p
+## Comparison   -6 0.816 -7.348  4 0.002
 ```
 
 ### Analyses of Pairwise Comparisons

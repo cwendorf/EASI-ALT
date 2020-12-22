@@ -17,7 +17,7 @@ knitr::opts_chunk$set(fig.width=7, fig.height=5,fig.path='figures/',echo=TRUE,wa
 ```
 
 ```{r,include=FALSE}
-library(EASI-ALT)
+library(EASIalt)
 ```
 
 # Estimation Approach to Statistical Inference
