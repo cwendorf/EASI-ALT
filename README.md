@@ -1,10 +1,10 @@
-# EASI-ALT
+# EASIalt
 
 ## The Other Version of EASI
 
 ### Overview
 
-**EASI-ALT** is an R package that implements features of estimation statistics. It only uses raw data input (no summary statistics input), but has some other features that [**EASI**](https://cwendorf.github.io/EASI/) does not yet have. It is mostly a wrapper for built-in R functions and exists as a proof of concept before I develop the functions for [**EASI**](https://cwendorf.github.io/EASI/).
+**EASIalt** is an R package that implements features of estimation statistics. It only uses raw data input (no summary statistics input), but has some other features that [**EASI**](https://cwendorf.github.io/EASI/) does not yet have. It is mostly a wrapper for built-in R functions and exists as a proof of concept before I develop the functions for [**EASI**](https://cwendorf.github.io/EASI/).
 
 ### Installation
 
@@ -12,14 +12,14 @@ This package is not currently on CRAN, but can be installed directly from the re
 
 ``` r
 install.packages("devtools")
-devtools::install_github("cwendorf/EASI-ALT")
+devtools::install_github("cwendorf/EASIalt")
 library(EASIalt)
 ```
 
 If you do not wish a full install, the functions can be sourced instead:
 
 ```r
-source("http://raw.githubusercontent.com/cwendorf/EASI-ALT/master/sourceEASI-ALT.R")
+source("http://raw.githubusercontent.com/cwendorf/EASI-ALT/master/sourceEASIalt.R")
 ```
 
 ### Usage
