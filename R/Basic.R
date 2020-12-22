@@ -30,7 +30,7 @@ nhst <- function(y,...){
 ### Confidence Interval Plot Functions
 
 .ciPlot <- function(results,main,ylab,xlab,mu){
-  plot(results[,1],xaxt='n',xlim=c(.5,nrow(results)+.5),ylim=c(floor(min(results[,2])/2)*2,ceiling(max(results[,3])/2)*2),xlab=xlab,cex.lab=1.3,ylab=ylab,main=main,las=1,cex=1.5,pch=16,bty="l")
+  plot(results[,1],xaxt='n',xlim=c(.5,nrow(results)+.5),ylim=c(floor(min(results[,2])/2)*2,ceiling(max(results[,3])/2)*2),xlab=xlab,cex.lab=1.15,ylab=ylab,main=main,las=1,cex=1.5,pch=16,bty="l")
   axis(1, 1:nrow(results), row.names(results))
   for (i in 1:nrow(results)) lines(x=c(i,i),y=c(results[,2][i],results[,3][i]),lwd=2)
   for (i in 1:nrow(results)) text(i,results[,1][i],results[,1][i],cex=.8,pos=2,offset=.5,font=2)
@@ -40,7 +40,7 @@ nhst <- function(y,...){
 }
 
 .diffPlot <- function(results,graph,main,ylab,xlab){
-  plot(c(1,2,3),graph[,1],xaxt="n",xlim=c(.4,3.6),ylim=c(floor(min(graph[,2])/2)*2,ceiling(max(graph[,3])/2)*2),pch=c(16,16,17),cex=1.5,xlab=xlab,ylab=ylab,main=main,las=1,cex.lab=1.3,bty="l")
+  plot(c(1,2,3),graph[,1],xaxt="n",xlim=c(.4,3.6),ylim=c(floor(min(graph[,2])/2)*2,ceiling(max(graph[,3])/2)*2),pch=c(16,16,17),cex=1.5,xlab=xlab,ylab=ylab,main=main,las=1,cex.lab=1.15,bty="l")
   axis(1,at=c(1,2,3),labels=rownames(graph))
   for (i in 1:3) lines(x=c(i,i), y=c(graph[,2][i],graph[,3][i]),lwd=2)
   for (i in 1:2) text(i,graph[,1][i],graph[,1][i],cex=.8,pos=2,offset=.5,font=2)

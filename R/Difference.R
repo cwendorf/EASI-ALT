@@ -13,7 +13,8 @@ ciDifference.default <- function(x,y,conf.level=.95,...){
   df <- as.numeric(model$parameter)
   LL <- model$conf.int[1]
   UL <- model$conf.int[2]
-  results <- round(c(Diff=MD,SE=SE,df=df,LL=LL,UL=UL),3)
+  results <- round(data.frame(Diff=MD,SE=SE,df=df,LL=LL,UL=UL),3)
+  rownames(results) <- c("Comparison")
   return(results) 
 }
 
@@ -24,7 +25,8 @@ ciDifference.formula <- function(formula,conf.level=.95,...){
   df <- as.numeric(model$parameter)
   LL <- model$conf.int[1]
   UL <- model$conf.int[2]
-  results <- round(c(Diff=MD,SE=SE,df=df,LL=LL,UL=UL),3)
+  results <- round(data.frame(Diff=MD,SE=SE,df=df,LL=LL,UL=UL),3)
+  rownames(results) <- c("Comparison")  
   return(results)
 }
 
@@ -41,7 +43,8 @@ nhstDifference.default <- function(x,y,...){
   t <- as.numeric(model$statistic)
   df <- as.numeric(model$parameter)
   p <- as.numeric(model$p.value)
-  results <- round(c(Diff=MD,SE=SE,t=t,df=df,p=p),3)
+  results <- round(data.frame(Diff=MD,SE=SE,t=t,df=df,p=p),3)
+  rownames(results) <- c("Comparison")  
   return(results) 
 }
 
@@ -53,7 +56,8 @@ nhstDifference.formula <- function(formula,...){
   t <- as.numeric(model$statistic)
   df <- as.numeric(model$parameter)
   p <- as.numeric(model$p.value)
-  results <- round(c(Diff=MD,SE=SE,t=t,df=df,p=p),3)
+  results <- round(data.frame(Diff=MD,SE=SE,t=t,df=df,p=p),3)
+  rownames(results) <- c("Comparison")  
   return(results)
 }
 
@@ -67,11 +71,12 @@ cipDifference.default <- function(...){
   ylab <- "Outcome"
   xlab <- ""
   Vars <- ciMeans(...)[2:1,c(2,5,6)]
-  Diff <- ciDifference(...)[c(1,4,5)]
+  Diff <- ciDifference(...)[1,c(1,4,5)]
+  colnames(Diff)=c("M","LL","UL")  
   results <- rbind(Vars,Diff)
   Diff <- Diff+Vars[1,1]  
   graph <- rbind(Vars,Diff)
-  rownames(graph)[3] <- "Diff"
+  rownames(graph)[3] <- "Comparison"
   .diffPlot(results,graph,main,ylab,xlab)
 }
 
@@ -79,9 +84,9 @@ cipDifference.formula <- function(formula,...){
   main <- "Confidence Intervals for the Comparison"
   ylab <- all.vars(formula)[1]
   xlab <- ""
-  Groups <- ciMeans(formula,...)
-  Groups <- Groups[2:1,c(2,5,6)]
-  Diff <- ciDifference(formula,...)[c(1,4,5)]
+  Groups <- ciMeans(formula,...)[2:1,c(2,5,6)]
+  Diff <- ciDifference(formula,...)[1,c(1,4,5)]
+  colnames(Diff)=c("M","LL","UL")
   results <- rbind(Groups,Diff)
   Diff <- Diff+Groups[1]
   graph <- rbind(Groups,Diff)
