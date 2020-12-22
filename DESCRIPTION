@@ -1,4 +1,4 @@
-Package: EASI-ALT
+Package: EASIalt
 Type: Package
 Title: Estimation Approach to Statistical Inference
 Description: An R package to estimate, test, and plot confidence intervals for means, mean comparisons, and mean contrasts. 

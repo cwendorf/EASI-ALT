@@ -13,7 +13,7 @@ This package is not currently on CRAN, but can be installed directly from the re
 ``` r
 install.packages("devtools")
 devtools::install_github("cwendorf/EASI-ALT")
-library(altEASI)
+library(EASIalt)
 ```
 
 If you do not wish a full install, the functions can be sourced instead:
