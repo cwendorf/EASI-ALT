@@ -3,7 +3,10 @@
 
 ### Confidence Interval Functions 
 
-ciHSD <- function(formula,conf.level=.95,...){
+ciHSD <- function(x,...) 
+  UseMethod("ciHSD")
+
+ciHSD.formula <- function(formula,conf.level=.95,...){
   model=aov(formula,...)
   results=round(TukeyHSD(model,conf.level=conf.level)[[1]][,1:3],3)
   return(results)
@@ -11,7 +14,10 @@ ciHSD <- function(formula,conf.level=.95,...){
 
 ### Null Hypothesis Significance Test Functions
 
-nhstHSD <- function(formula,conf.level=.95,...){
+nhstHSD <- function(x,...) 
+  UseMethod("nhstHSD")
+
+nhstHSD.formula <- function(formula,conf.level=.95,...){
   model=aov(formula,...)
   results=round(TukeyHSD(model,conf.level=conf.level)[[1]][,c(1,4)],3)
   return(results)
