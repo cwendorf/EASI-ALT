@@ -1,6 +1,6 @@
 # Estimation Approach to Statistical Inference
 
-## EASI v2.201220
+## EASIalt v2.201220
 
 - Forked from EASI
 - Added regression functions and vignette
