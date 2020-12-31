@@ -106,7 +106,7 @@ nhstPairwise(Time1,Time2,Time3,mu=-2)
 
 ### Analyses of a Set of Contrasts
 
-### Confidence Intervals for the Set of Contrasts
+#### Confidence Intervals for the Set of Contrasts
 
 ```{r}
 ciContrasts(Time1,Time2,Time3,contrasts=contr.sum)

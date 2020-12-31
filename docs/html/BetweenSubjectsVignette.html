@@ -12,7 +12,7 @@
 
 <meta name="author" content="Craig A. Wendorf" />
 
-<meta name="date" content="2020-12-22" />
+<meta name="date" content="2020-12-31" />
 
 <title>Estimation Approach to Statistical Inference</title>
 
@@ -329,7 +329,7 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 
 <h1 class="title toc-ignore">Estimation Approach to Statistical Inference</h1>
 <h4 class="author">Craig A. Wendorf</h4>
-<h4 class="date">2020-12-22</h4>
+<h4 class="date">2020-12-31</h4>
 
 
 
@@ -464,9 +464,8 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 </div>
 <div id="analyses-of-a-set-of-contrasts" class="section level3">
 <h3>Analyses of a Set of Contrasts</h3>
-</div>
-<div id="confidence-intervals-for-the-set-of-contrasts" class="section level3">
-<h3>Confidence Intervals for the Set of Contrasts</h3>
+<div id="confidence-intervals-for-the-set-of-contrasts" class="section level4">
+<h4>Confidence Intervals for the Set of Contrasts</h4>
 <div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1"></a><span class="kw">ciContrasts</span>(Outcome<span class="op">~</span>Group,<span class="dt">contrasts=</span>contr.sum)</span></code></pre></div>
 <pre><code>##             Est    SE     LL     UL
 ## (Intercept)   7 0.333  6.184  7.816
@@ -497,6 +496,7 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 ## (Intercept)   9 0.577  7.587 10.413
 ## x1           -5 0.816 -6.998 -3.002
 ## x2           -1 0.816 -2.998  0.998</code></pre>
+</div>
 <div id="plot-of-the-confidence-intervals-for-the-set-of-contrasts" class="section level4">
 <h4>Plot of the Confidence Intervals for the Set of Contrasts</h4>
 <div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1"></a><span class="kw">cipContrasts</span>(Outcome<span class="op">~</span>Group,<span class="dt">contrasts=</span>contr.sum)</span></code></pre></div>

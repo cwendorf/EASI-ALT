@@ -109,7 +109,7 @@ nhstPairwise(Outcome~Group,mu=-2)
 
 ### Analyses of a Set of Contrasts
 
-### Confidence Intervals for the Set of Contrasts
+#### Confidence Intervals for the Set of Contrasts
 
 ```{r}
 ciContrasts(Outcome~Group,contrasts=contr.sum)

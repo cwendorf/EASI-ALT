@@ -1,7 +1,7 @@
 ---
 title: "Estimation Approach to Statistical Inference"
 author: "Craig A. Wendorf"
-date: "2020-12-22"
+date: "2020-12-31"
 output: 
   rmarkdown::html_vignette:
     keep_md: TRUE
@@ -243,7 +243,7 @@ nhstPairwise(Time1,Time2,Time3,mu=-2)
 
 ### Analyses of a Set of Contrasts
 
-### Confidence Intervals for the Set of Contrasts
+#### Confidence Intervals for the Set of Contrasts
 
 
 ```r
