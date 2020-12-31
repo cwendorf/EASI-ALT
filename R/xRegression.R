@@ -14,7 +14,7 @@ pvaRegression.formula <- function(formula,...) {
   results <- cbind(r,r2)
   colnames(results) <- c("R","R2")
   rownames(results)="Model"
-  return(round(results,3))
+  round(results,3)
 }
 
 ### Confidence Interval Functions
@@ -29,7 +29,7 @@ ciRegression.formula <- function(formula,conf.level=.95,...) {
   ci <- confint(model,level=conf.level)
   results <- cbind(desc,ci)
   colnames(results) <- c("Est","SE","LL","UL")
-  return(round(results,3))
+  round(results,3)
 }
 
 ### Null Hypothesis Signifcance Test Functions
@@ -42,7 +42,7 @@ nhstRegression.formula <- function(formula,...) {
   summ <- summary(model)
   results <- summ$coef
   colnames(results)=c("Est","SE","t","p")
-  return(round(results,3))
+  round(results,3)
 }
 
 ### Confidence Interval Plot Functions

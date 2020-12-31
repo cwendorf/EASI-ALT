@@ -3,7 +3,7 @@
 
 ### Confidence Interval Functions 
 
-ci <- function(y,...){
+.ci <- function(y,...){
   N <- length(y)
   M <- mean(y,na.rm=TRUE)
   SD <- sd(y,na.rm=TRUE)
@@ -16,7 +16,7 @@ ci <- function(y,...){
 
 ### Null Hypothesis Significance Test Functions
 
-nhst <- function(y,...){
+.nhst <- function(y,...){
   model <- t.test(y,...)
   mu <- as.numeric(model$null.value)
   MD <- as.numeric(model$estimate-mu)

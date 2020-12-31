@@ -20,7 +20,7 @@ ciContrasts.default <- function(...,contrasts=contr.sum,conf.level=.95){
   second <- confint(lm(model),level=conf.level)[1:vlevels,1:2]
   results <- round(cbind(first,second),3)
   colnames(results) <- c("Est","SE","LL","UL")
-  return(results)
+  results
 }
 
 ciContrasts.formula <- function(formula,contrasts=contr.sum,conf.level=.95,...){
@@ -30,7 +30,7 @@ ciContrasts.formula <- function(formula,contrasts=contr.sum,conf.level=.95,...){
   model <- lm(y~x,...)
   results <- round(cbind(summary(model)[[4]][,1:2],confint(model,level=conf.level)),3)
   colnames(results) <- c("Est","SE","LL","UL")
-  return(results)
+  results
 }
  
 ### Null Hypothesis Significance Test Functions
@@ -51,7 +51,7 @@ nhstContrasts.default <- function(...,contrasts=contr.sum){
   first <- summary(lm(model))[[4]][1:vlevels,1:4]
   results <- round(first,3)
   colnames(results) <- c("Diff","SE","t","p")
-  return(results)
+  results
 }
 
 nhstContrasts.formula <- function(formula,contrasts=contr.sum,...){
@@ -61,7 +61,7 @@ nhstContrasts.formula <- function(formula,contrasts=contr.sum,...){
   model <- lm(y~x,...)
   results <- round(summary(model)[[4]][,],3)
   colnames(results) <- c("Diff","SE","t","p")
-  return(results)
+  results
 }
 
 ### Confidence Interval Plot Functions

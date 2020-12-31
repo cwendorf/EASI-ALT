@@ -15,7 +15,7 @@ ciDifference.default <- function(x,y,conf.level=.95,...){
   UL <- model$conf.int[2]
   results <- round(data.frame(Diff=MD,SE=SE,df=df,LL=LL,UL=UL),3)
   rownames(results) <- c("Comparison")
-  return(results) 
+  results
 }
 
 ciDifference.formula <- function(formula,conf.level=.95,...){
@@ -27,7 +27,7 @@ ciDifference.formula <- function(formula,conf.level=.95,...){
   UL <- model$conf.int[2]
   results <- round(data.frame(Diff=MD,SE=SE,df=df,LL=LL,UL=UL),3)
   rownames(results) <- c("Comparison")  
-  return(results)
+  results
 }
 
 ### Null Hypothesis Significance Test Functions
@@ -45,7 +45,7 @@ nhstDifference.default <- function(x,y,...){
   p <- as.numeric(model$p.value)
   results <- round(data.frame(Diff=MD,SE=SE,t=t,df=df,p=p),3)
   rownames(results) <- c("Comparison")  
-  return(results) 
+  results
 }
 
 nhstDifference.formula <- function(formula,...){
@@ -58,7 +58,7 @@ nhstDifference.formula <- function(formula,...){
   p <- as.numeric(model$p.value)
   results <- round(data.frame(Diff=MD,SE=SE,t=t,df=df,p=p),3)
   rownames(results) <- c("Comparison")  
-  return(results)
+  results
 }
 
 ### Confidence Interval Plot Functions

@@ -11,7 +11,7 @@ fnsData.default <- function(...) {
   results <- do.call(rbind,lapply(data,function(x) boxplot.stats(x)$stats))
   results <- round(results,3)
   colnames(results) <- c("Lower Whisker","Lower Hinge","Median","Upper Hinge","Upper Whisker")
-  return(results)
+  results
 }
 
 fnsData.formula <- function(formula,...) {
@@ -20,7 +20,7 @@ fnsData.formula <- function(formula,...) {
   results <- results[[2]]
   rownames(results) <- rn
   colnames(results) <- c("Lower Whisker","Lower Hinge","Median","Upper Hinge","Upper Whisker")
-  return(results)
+  results
 }
 
 #### Plot Functions for Boxes

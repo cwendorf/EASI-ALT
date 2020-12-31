@@ -1,13 +1,13 @@
 # Estimation Approach to Statistical Inference
 ## Source All Available EASIalt Functions
 
-source("http://raw.githubusercontent.com/cwendorf/EASIalt/master/R/Basic.R")
-source("http://raw.githubusercontent.com/cwendorf/EASIalt/master/R/Data.R")
-source("http://raw.githubusercontent.com/cwendorf/EASIalt/master/R/Summary.R")
-source("http://raw.githubusercontent.com/cwendorf/EASIalt/master/R/ANOVA.R")
-source("http://raw.githubusercontent.com/cwendorf/EASIalt/master/R/Contrasts.R")
-source("http://raw.githubusercontent.com/cwendorf/EASIalt/master/R/Difference.R")
-source("http://raw.githubusercontent.com/cwendorf/EASIalt/master/R/Means.R")
-source("http://raw.githubusercontent.com/cwendorf/EASIalt/master/R/Pairwise.R")
-source("http://raw.githubusercontent.com/cwendorf/EASIalt/master/R/Regression.R")
-source("http://raw.githubusercontent.com/cwendorf/EASIalt/master/R/Tukey.R")
+source("http://raw.githubusercontent.com/cwendorf/EASIalt/master/R/xBasic.R")
+source("http://raw.githubusercontent.com/cwendorf/EASIalt/master/R/xData.R")
+source("http://raw.githubusercontent.com/cwendorf/EASIalt/master/R/xSummary.R")
+source("http://raw.githubusercontent.com/cwendorf/EASIalt/master/R/xANOVA.R")
+source("http://raw.githubusercontent.com/cwendorf/EASIalt/master/R/xContrasts.R")
+source("http://raw.githubusercontent.com/cwendorf/EASIalt/master/R/xDifference.R")
+source("http://raw.githubusercontent.com/cwendorf/EASIalt/master/R/xMeans.R")
+source("http://raw.githubusercontent.com/cwendorf/EASIalt/master/R/xPairwise.R")
+source("http://raw.githubusercontent.com/cwendorf/EASIalt/master/R/xRegression.R")
+source("http://raw.githubusercontent.com/cwendorf/EASIalt/master/R/xTukey.R")

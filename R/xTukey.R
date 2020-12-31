@@ -9,7 +9,7 @@ ciHSD <- function(x,...)
 ciHSD.formula <- function(formula,conf.level=.95,...){
   model=aov(formula,...)
   results=round(TukeyHSD(model,conf.level=conf.level)[[1]][,1:3],3)
-  return(results)
+  results
 }
 
 ### Null Hypothesis Significance Test Functions
@@ -20,6 +20,5 @@ nhstHSD <- function(x,...)
 nhstHSD.formula <- function(formula,conf.level=.95,...){
   model=aov(formula,...)
   results=round(TukeyHSD(model,conf.level=conf.level)[[1]][,c(1,4)],3)
-  return(results)
+  results
 }
-

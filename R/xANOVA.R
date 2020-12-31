@@ -13,10 +13,10 @@ nhstANOVA.default <- function(...){
   dataLong$Subjects <- as.factor(dataLong$Subjects)
   dataLong$Variables <- as.factor(dataLong$Variables)
   model <- lm(Outcome~Variables+Subjects,data=dataLong)
-  return(anova(model))
+  anova(model)
 }
 
 nhstANOVA.formula <- function(formula,...){
   model <- lm(formula,...)
-  return(anova(model))
+  anova(model)
 }

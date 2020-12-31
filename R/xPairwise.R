@@ -29,7 +29,7 @@ ciPairwise.default <- function(...,conf.level=.95){
   	comp <-comp+1
   }
   }
-  return(round(results,3))
+  round(results,3)
 }
 
 ciPairwise.formula <- function(formula,...){
@@ -55,7 +55,7 @@ ciPairwise.formula <- function(formula,...){
 	comp <- comp+1
   }
   }
-  return(round(results,3))
+  round(results,3)
 }
 
 ### Null Hypothesis Significance Test Functions
@@ -86,7 +86,7 @@ nhstPairwise.default <- function(...,conf.level=.95,mu=0){
   	comp <- comp+1
   }
   }
-  return(round(results,3))
+  round(results,3)
 }
 
 nhstPairwise.formula <- function(formula,...){
@@ -113,7 +113,7 @@ nhstPairwise.formula <- function(formula,...){
 	  comp <- comp+1
   }
   }
-  return(round(results,3))
+  round(results,3)
 }
 
 ### Confidence Interval Plot Functions
