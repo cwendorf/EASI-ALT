@@ -65,7 +65,6 @@ export(effectRegression)
 export(estimateRegression)
 export(testRegression)
 
-S3method(plotRegression,default)
 S3method(plotRegression,formula)
 export(plotRegression)
 
