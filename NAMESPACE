@@ -9,34 +9,54 @@ export(testANOVA)
 
 export(estimateContrasts)
 export(testContrasts)
+
+S3method(plotContrasts,default)
+S3method(plotContrasts,formula)
 export(plotContrasts)
 
 ### xData
 
+S3method(plotData,default)
+S3method(plotData,formula)
 export(plotData)
+
+S3method(addData,default)
+S3method(addData,formula)
 export(addData)
 
 ### xBoxes
 
 export(describeBoxes)
+
+S3method(plotBoxes,default)
+S3method(plotBoxes,formula)
 export(plotBoxes)
 
 ### xDifference
 
 export(estimateDifference)
 export(testDifference)
+
+S3method(plotDifference,default)
+S3method(plotDifference,formula)
 export(plotDifference)
 
 ### xMeans
 
 export(estimateMeans)
 export(testMeans)
+
+S3method(plotMeans,default)
+S3method(plotMeans,formula)
 export(plotMeans)
 
 ### xPairwise
 
 export(estimatePairwise)
 export(testPairwise)
+
+S3method(plotPairwise,default)
+S3method(plotPairwise,formula)
 export(plotPairwise)
 
 ### xRegression
@@ -44,6 +64,9 @@ export(plotPairwise)
 export(effectRegression)
 export(estimateRegression)
 export(testRegression)
+
+S3method(plotRegression,default)
+S3method(plotRegression,formula)
 export(plotRegression)
 
 ### xTukey
