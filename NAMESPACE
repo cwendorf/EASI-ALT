@@ -3,23 +3,23 @@
 
 ### xANOVA
 
-S3method(nhstANOVA,default)
-S3method(nhstANOVA,formula)
-export(nhstANOVA)
+S3method(.nhstANOVA,default)
+S3method(.nhstANOVA,formula)
+export(.nhstANOVA)
 
 ### xContrasts
 
-S3method(ciContrasts,default)
-S3method(ciContrasts,formula)
-export(ciContrasts)
+S3method(.ciContrasts,default)
+S3method(.ciContrasts,formula)
+export(.ciContrasts)
 
-S3method(nhstContrasts,default)
-S3method(nhstContrasts,formula)
-export(nhstContrasts)
+S3method(.nhstContrasts,default)
+S3method(.nhstContrasts,formula)
+export(.nhstContrasts)
 
-S3method(cipContrasts,default)
-S3method(cipContrasts,formula)
-export(cipContrasts)
+S3method(.cipContrasts,default)
+S3method(.cipContrasts,formula)
+export(.cipContrasts)
 
 ### xData
 
@@ -33,74 +33,74 @@ export(adpData)
 
 ### xSummary
 
-S3method(fnsData,default)
-S3method(fnsData,formula)
-export(fnsData)
+S3method(.fnsData,default)
+S3method(.fnsData,formula)
+export(.fnsData)
 
-S3method(bpData,default)
-S3method(bpData,formula)
-export(bpData)
+S3method(.bpData,default)
+S3method(.bpData,formula)
+export(.bpData)
 
 ### xDifference
 
-S3method(ciDifference,default)
-S3method(ciDifference,formula)
-export(ciDifference)
+S3method(.ciDifference,default)
+S3method(.ciDifference,formula)
+export(.ciDifference)
 
-S3method(nhstDifference,default)
-S3method(nhstDifference,formula)
-export(nhstDifference)
+S3method(.nhstDifference,default)
+S3method(.nhstDifference,formula)
+export(.nhstDifference)
 
-S3method(cipDifference,default)
-S3method(cipDifference,formula)
-export(cipDifference)
+S3method(.cipDifference,default)
+S3method(.cipDifference,formula)
+export(.cipDifference)
 
 ### xMeans
 
-S3method(ciMeans,default)
-S3method(ciMeans,formula)
-export(ciMeans)
+S3method(.ciMeans,default)
+S3method(.ciMeans,formula)
+export(.ciMeans)
 
-S3method(nhstMeans,default)
-S3method(nhstMeans,formula)
-export(nhstMeans)
+S3method(.nhstMeans,default)
+S3method(.nhstMeans,formula)
+export(.nhstMeans)
 
-S3method(cipMeans,default)
-S3method(cipMeans,formula)
-export(cipMeans)
+S3method(.cipMeans,default)
+S3method(.cipMeans,formula)
+export(.cipMeans)
 
 ### xPairwise
 
-S3method(ciPairwise,default)
-S3method(ciPairwise,formula)
-export(ciPairwise)
+S3method(.ciPairwise,default)
+S3method(.ciPairwise,formula)
+export(.ciPairwise)
 
-S3method(nhstPairwise,default)
-S3method(nhstPairwise,formula)
-export(nhstPairwise)
+S3method(.nhstPairwise,default)
+S3method(.nhstPairwise,formula)
+export(.nhstPairwise)
 
-S3method(cipPairwise,default)
-S3method(cipPairwise,formula)
-export(cipPairwise)
+S3method(.cipPairwise,default)
+S3method(.cipPairwise,formula)
+export(.cipPairwise)
 
 ### xRegression
 
-S3method(pvaRegression,formula)
-export(pvaRegression)
+S3method(.pvaRegression,formula)
+export(.pvaRegression)
 
-S3method(ciRegression,formula)
-export(ciRegression)
+S3method(.ciRegression,formula)
+export(.ciRegression)
 
-S3method(nhstRegression,formula)
-export(nhstRegression)
+S3method(.nhstRegression,formula)
+export(.nhstRegression)
 
-S3method(cipRegression,formula)
-export(cipRegression)
+S3method(.cipRegression,formula)
+export(.cipRegression)
 
 ### xTukey
 
-S3method(ciHSD,formula)
-export(ciHSD)
+S3method(.ciHSD,formula)
+export(.ciHSD)
 
-S3method(nhstHSD,formula)
-export(nhstHSD)
+S3method(.nhstHSD,formula)
+export(.nhstHSD)
