@@ -14,18 +14,18 @@ RegressionData
 
 #### Overall Fit of Regression Model
 
-.pvaRegression(Outcome~Pred1+Pred2)
+effectRegression(Outcome~Pred1+Pred2)
 
 #### Confidence Intervals for the Regression Coefficients
 
-.ciRegression(Outcome~Pred1+Pred2)
-.ciRegression(Outcome~Pred1+Pred2,conf.level=.99)
+estimateRegression(Outcome~Pred1+Pred2)
+estimateRegression(Outcome~Pred1+Pred2,conf.level=.99)
 
 #### Plot of the Confidence Intervals for the Regression Coefficients
 
-.cipRegression(Outcome~Pred1+Pred2)
-.cipRegression(Outcome~Pred1+Pred2,conf.level=.99)
+plotRegression(Outcome~Pred1+Pred2)
+plotRegression(Outcome~Pred1+Pred2,conf.level=.99)
 
 #### Significance Tests for the Regression Coefficients
 
-.nhstRegression(Outcome~Pred1+Pred2)
+testRegression(Outcome~Pred1+Pred2)

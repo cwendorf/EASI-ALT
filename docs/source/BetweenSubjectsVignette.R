@@ -14,83 +14,83 @@ BetweenData
 
 #### Confidence Intervals for the Means
 
-.ciMeans(Outcome~Group)
-.ciMeans(Outcome~Group,conf.level=.99)
+estimateMeans(Outcome~Group)
+estimateMeans(Outcome~Group,conf.level=.99)
 
 #### Plot of the Confidence Intervals for the Means
 
-.cipMeans(Outcome~Group)
-.cipMeans(Outcome~Group,conf.level=.99,mu=5)
+plotMeans(Outcome~Group)
+plotMeans(Outcome~Group,conf.level=.99,mu=5)
 
 #### Significance Tests for the Means
 
-.nhstMeans(Outcome~Group)
-.nhstMeans(Outcome~Group,mu=5)
+testMeans(Outcome~Group)
+testMeans(Outcome~Group,mu=5)
 
 ### Analyses of a Group Comparison
 
 #### Confidence Interval for a Mean Difference
 
 Comparison=factor(Group,c("Group1","Group2"))
-.ciDifference(Outcome~Comparison)
-.ciDifference(Outcome~Comparison,conf.level=.99)
+estimateDifference(Outcome~Comparison)
+estimateDifference(Outcome~Comparison,conf.level=.99)
 Comparison=factor(Group,c("Group3","Group1"))
-.ciDifference(Outcome~Comparison)
+estimateDifference(Outcome~Comparison)
 
 #### Plot of the Confidence Interval for the Mean Difference
 
 Comparison=factor(Group,c("Group1","Group2"))
-.cipDifference(Outcome~Comparison)
-.cipDifference(Outcome~Comparison,conf.level=.99)
+plotDifference(Outcome~Comparison)
+plotDifference(Outcome~Comparison,conf.level=.99)
 
 #### Significance Test of the Mean Difference
 
-.nhstDifference(Outcome~Comparison)
-.nhstDifference(Outcome~Comparison,mu=2)
+testDifference(Outcome~Comparison)
+testDifference(Outcome~Comparison,mu=2)
 
 ### Analyses of Pairwise Comparisons
 
 #### Confidence Intervals for the Pairwise Comparisons
 
-.ciPairwise(Outcome~Group)
-.ciPairwise(Outcome~Group,conf.level=.99)
+estimatePairwise(Outcome~Group)
+estimatePairwise(Outcome~Group,conf.level=.99)
 
 #### Plot of the Confidence Intervals for the Pairwise Comparisons
 
-.cipPairwise(Outcome~Group)
-.cipPairwise(Outcome~Group,mu=-2,conf.level=.99)
+plotPairwise(Outcome~Group)
+plotPairwise(Outcome~Group,mu=-2,conf.level=.99)
 
 #### Significance Tests of the Pairwise Comparisons
 
-.nhstPairwise(Outcome~Group)
-.nhstPairwise(Outcome~Group,mu=-2)
+testPairwise(Outcome~Group)
+testPairwise(Outcome~Group,mu=-2)
 
 ### Analyses of a Set of Contrasts
 
 ### Confidence Intervals for the Set of Contrasts
 
-.ciContrasts(Outcome~Group,contrasts=contr.sum)
-.ciContrasts(Outcome~Group,contrasts=contr.sum,conf.level=.99)
+estimateContrasts(Outcome~Group,contrasts=contr.sum)
+estimateContrasts(Outcome~Group,contrasts=contr.sum,conf.level=.99)
 
-.ciContrasts(Outcome~Group,contrasts=contr.treatment)
-.ciContrasts(Outcome~Group,contrasts=contr.poly)
-.ciContrasts(Outcome~Group,contrasts=contr.helmert)
-.ciContrasts(Outcome~Group,contrasts=contr.SAS)
+estimateContrasts(Outcome~Group,contrasts=contr.treatment)
+estimateContrasts(Outcome~Group,contrasts=contr.poly)
+estimateContrasts(Outcome~Group,contrasts=contr.helmert)
+estimateContrasts(Outcome~Group,contrasts=contr.SAS)
 
 #### Plot of the Confidence Intervals for the Set of Contrasts
 
-.cipContrasts(Outcome~Group,contrasts=contr.sum)
-.cipContrasts(Outcome~Group,contrasts=contr.sum,conf.level=.99)
+plotContrasts(Outcome~Group,contrasts=contr.sum)
+plotContrasts(Outcome~Group,contrasts=contr.sum,conf.level=.99)
 
-.cipContrasts(Outcome~Group,contrasts=contr.treatment)
-.cipContrasts(Outcome~Group,contrasts=contr.poly)
-.cipContrasts(Outcome~Group,contrasts=contr.helmert)
-.cipContrasts(Outcome~Group,contrasts=contr.SAS)
+plotContrasts(Outcome~Group,contrasts=contr.treatment)
+plotContrasts(Outcome~Group,contrasts=contr.poly)
+plotContrasts(Outcome~Group,contrasts=contr.helmert)
+plotContrasts(Outcome~Group,contrasts=contr.SAS)
 
 #### Significance Tests of the Set of Contrasts
 
-.nhstContrasts(Outcome~Group,contrasts=contr.sum)
-.nhstContrasts(Outcome~Group,contrasts=contr.treatment)
-.nhstContrasts(Outcome~Group,contrasts=contr.poly)
-.nhstContrasts(Outcome~Group,contrasts=contr.helmert)
-.nhstContrasts(Outcome~Group,contrasts=contr.SAS)
+testContrasts(Outcome~Group,contrasts=contr.sum)
+testContrasts(Outcome~Group,contrasts=contr.treatment)
+testContrasts(Outcome~Group,contrasts=contr.poly)
+testContrasts(Outcome~Group,contrasts=contr.helmert)
+testContrasts(Outcome~Group,contrasts=contr.SAS)
