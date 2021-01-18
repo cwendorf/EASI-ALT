@@ -23,13 +23,13 @@ export(.cipContrasts)
 
 ### xData
 
-S3method(dpData,default)
-S3method(dpData,formula)
-export(dpData)
+S3method(.dpData,default)
+S3method(.dpData,formula)
+export(.dpData)
 
-S3method(adpData,default)
-S3method(adpData,formula)
-export(adpData)
+S3method(.adpData,default)
+S3method(.adpData,formula)
+export(.adpData)
 
 ### xSummary
 
