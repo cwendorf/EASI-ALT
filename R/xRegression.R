@@ -17,6 +17,12 @@
   round(results,3)
 }
 
+effectRegression <- function(...){
+  cat("\nPROPORTION OF VARIANCE ACCOUNTED FOR\n\n")
+  print(.pvaRegression(...))
+  cat("\n")
+}
+
 ### Confidence Interval Functions
 
 .ciRegression <- function(x,...) 
@@ -32,6 +38,12 @@
   round(results,3)
 }
 
+estimateRegression <- function(...){
+  cat("\nCONFIDENCE INTERVALS FOR THE REGRESSION COEFFICENTS\n\n")
+  print(.ciRegression(...))
+  cat("\n")
+}
+
 ### Null Hypothesis Signifcance Test Functions
 
 .nhstRegression <- function(x,...) 
@@ -43,6 +55,12 @@
   results <- summ$coef
   colnames(results)=c("Est","SE","t","p")
   round(results,3)
+}
+
+testRegression <- function(...){
+  cat("\nHYPOTHESIS TESTS FOR THE REGRESSION COEFFICIENTS\n\n")
+  print(.nhstRegression(...))
+  cat("\n")
 }
 
 ### Confidence Interval Plot Functions
@@ -57,3 +75,6 @@
   results <- .ciRegression(formula,conf.level=conf.level,...)[,c(1,3,4)]
   .ciPlot(results,main,ylab,xlab,mu)
 }
+
+plotRegression <- function(x,...) 
+  UseMethod(".cipRegression")

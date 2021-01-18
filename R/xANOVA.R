@@ -20,3 +20,9 @@
   model <- lm(formula,...)
   anova(model)
 }
+
+testANOVA <- function(...){
+  cat("\nANALYSIS OF VARIANCE\n\n")
+  print(.nhstANOVA(...))
+  cat("\n")
+}

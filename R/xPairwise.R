@@ -58,6 +58,11 @@
   round(results,3)
 }
 
+estimatePairwise <- function(...){
+  cat("\nCONFIDENCE INTERVALS FOR THE PAIRWISE COMPARISONS\n\n")
+  print(.ciPairwise(...))
+  cat("\n")
+}
 ### Null Hypothesis Significance Test Functions
 
 .nhstPairwise <- function(x,...) 
@@ -116,6 +121,12 @@
   round(results,3)
 }
 
+testPairwise <- function(...){
+  cat("\nHYPOTHESIS TESTS FOR THE PAIRWISE COMPARISONS\n\n")
+  print(.nhstPairwise(...))
+  cat("\n")
+}
+
 ### Confidence Interval Plot Functions
 
 .cipPairwise <- function(x,...) 
@@ -136,3 +147,6 @@
   results <- .ciPairwise(formula,...)[,c(1,4,5)]
   .ciPlot(results,main,ylab,xlab,mu)
 } 
+
+plotPairwise <- function(x,...) 
+  UseMethod(".cipPairwise")

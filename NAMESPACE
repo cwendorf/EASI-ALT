@@ -3,104 +3,50 @@
 
 ### xANOVA
 
-S3method(.nhstANOVA,default)
-S3method(.nhstANOVA,formula)
-export(.nhstANOVA)
+export(testANOVA)
 
 ### xContrasts
 
-S3method(.ciContrasts,default)
-S3method(.ciContrasts,formula)
-export(.ciContrasts)
-
-S3method(.nhstContrasts,default)
-S3method(.nhstContrasts,formula)
-export(.nhstContrasts)
-
-S3method(.cipContrasts,default)
-S3method(.cipContrasts,formula)
-export(.cipContrasts)
+export(estimateContrasts)
+export(testContrasts)
+export(plotContrasts)
 
 ### xData
 
-S3method(.dpData,default)
-S3method(.dpData,formula)
-export(.dpData)
+export(plotData)
+export(addData)
 
-S3method(.adpData,default)
-S3method(.adpData,formula)
-export(.adpData)
+### xBoxes
 
-### xSummary
-
-S3method(.fnsData,default)
-S3method(.fnsData,formula)
-export(.fnsData)
-
-S3method(.bpData,default)
-S3method(.bpData,formula)
-export(.bpData)
+export(describeBoxes)
+export(plotBoxes)
 
 ### xDifference
 
-S3method(.ciDifference,default)
-S3method(.ciDifference,formula)
-export(.ciDifference)
-
-S3method(.nhstDifference,default)
-S3method(.nhstDifference,formula)
-export(.nhstDifference)
-
-S3method(.cipDifference,default)
-S3method(.cipDifference,formula)
-export(.cipDifference)
+export(estimateDifference)
+export(testDifference)
+export(plotDifference)
 
 ### xMeans
 
-S3method(.ciMeans,default)
-S3method(.ciMeans,formula)
-export(.ciMeans)
-
-S3method(.nhstMeans,default)
-S3method(.nhstMeans,formula)
-export(.nhstMeans)
-
-S3method(.cipMeans,default)
-S3method(.cipMeans,formula)
-export(.cipMeans)
+export(estimateMeans)
+export(testMeans)
+export(plotMeans)
 
 ### xPairwise
 
-S3method(.ciPairwise,default)
-S3method(.ciPairwise,formula)
-export(.ciPairwise)
-
-S3method(.nhstPairwise,default)
-S3method(.nhstPairwise,formula)
-export(.nhstPairwise)
-
-S3method(.cipPairwise,default)
-S3method(.cipPairwise,formula)
-export(.cipPairwise)
+export(estimatePairwise)
+export(testPairwise)
+export(plotPairwise)
 
 ### xRegression
 
-S3method(.pvaRegression,formula)
-export(.pvaRegression)
-
-S3method(.ciRegression,formula)
-export(.ciRegression)
-
-S3method(.nhstRegression,formula)
-export(.nhstRegression)
-
-S3method(.cipRegression,formula)
-export(.cipRegression)
+export(effectRegression)
+export(estimateRegression)
+export(testRegression)
+export(plotRegression)
 
 ### xTukey
 
-S3method(.ciHSD,formula)
-export(.ciHSD)
-
-S3method(.nhstHSD,formula)
-export(.nhstHSD)
+export(estimateHSD)
+export(testHSD)

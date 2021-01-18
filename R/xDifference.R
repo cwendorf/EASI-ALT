@@ -30,6 +30,12 @@
   results
 }
 
+estimateDifference<-function(...) {
+  cat("\nCONFIDENCE INTERVAL FOR THE COMPARISON\n\n")
+  print(.ciDifference(...)) 
+  cat("\n")  
+}
+
 ### Null Hypothesis Significance Test Functions
 
 .nhstDifference <- function(x,...) 
@@ -59,6 +65,12 @@
   results <- round(data.frame(Diff=MD,SE=SE,t=t,df=df,p=p),3)
   rownames(results) <- c("Comparison")  
   results
+}
+
+testDifference <- function(...){
+  cat("\nHYPOTHESIS TEST FOR THE COMPARISON\n\n")
+  print(.nhstDifference(...)) 
+  cat("\n")
 }
 
 ### Confidence Interval Plot Functions
@@ -92,3 +104,6 @@
   graph <- rbind(Groups,Diff)
   .diffPlot(results,graph,main,ylab,xlab)
 }
+
+plotDifference <- function(x,...) 
+  UseMethod(".cipDifference")

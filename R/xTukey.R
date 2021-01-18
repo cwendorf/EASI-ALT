@@ -12,6 +12,12 @@
   results
 }
 
+estimateHSD <- function(...){
+  cat("\nCONFIDENCE INTERVALS FOR THE POST HOC COMPARISONS\n\n")
+  print(.ciHSD(...))
+  cat("\n")
+}
+
 ### Null Hypothesis Significance Test Functions
 
 .nhstHSD <- function(x,...) 
@@ -21,4 +27,10 @@
   model=aov(formula,...)
   results=round(TukeyHSD(model,conf.level=conf.level)[[1]][,c(1,4)],3)
   results
+}
+
+testHSD <- function(...){
+  cat("\nHYPOTHESIS TESTS FOR THE POST HOC COMPARISONS\n\n")
+  print(.nhstHSD(...))
+  cat("\n")
 }

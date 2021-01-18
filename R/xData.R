@@ -31,6 +31,9 @@
   stripchart(formula,add=add,xlim=xlimrange,ylim=ylimrange,at=mn:mx,vertical=TRUE,method=method,main=main,ylab=ylab,xlab=xlab,jitter=0.08,col=col,pch=pch,cex.lab=1.3,...)
 }
 
+plotData <- function(x,...)
+  UseMethod(".dpData")
+
 ### Add Data to Plot
 
 .adpData <- function(x,...) 
@@ -50,3 +53,6 @@
   mx <- max(adjustX,na.rm=TRUE)
   stripchart(formula,add=TRUE,at=mn:mx,vertical=TRUE,method=method,jitter=0.08,pch=pch,col=col,...)
 }
+
+addData <- function(x,...) 
+  UseMethod(".adpData")

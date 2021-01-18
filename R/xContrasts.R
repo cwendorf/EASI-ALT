@@ -32,7 +32,13 @@
   colnames(results) <- c("Est","SE","LL","UL")
   results
 }
- 
+
+estimateContrasts <- function(...){
+  cat("\nCONFIDENCE INTERVALS FOR THE CONTRASTS\n\n")
+  print(.ciContrasts(...))
+  cat("\n")
+}
+
 ### Null Hypothesis Significance Test Functions
 
 .nhstContrasts <- function(x,...) 
@@ -64,6 +70,13 @@
   results
 }
 
+testContrasts <- function(...){
+  cat("\nHYPOTHESIS TESTS FOR THE CONTRASTS\n\n")
+  print(.nhstContrasts(...))
+  cat("\n")
+}
+
+
 ### Confidence Interval Plot Functions
 
 .cipContrasts <- function(x,...) 
@@ -84,3 +97,6 @@
   results <- .ciContrasts(formula,...)[,c(1,3,4)]
   .ciPlot(results,main,ylab,xlab,mu)
 }
+
+plotContrasts <- function(x,...) 
+  UseMethod(".cipContrasts")

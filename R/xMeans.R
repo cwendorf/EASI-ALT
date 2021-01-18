@@ -23,6 +23,12 @@
   results
 }
 
+estimateMeans <- function(...){
+  cat("\nCONFIDENCE INTERVALS FOR THE MEANS\n\n")
+  print(.ciMeans(...))
+  cat("\n")
+}
+
 ### Null Hypothesis Significance Test Functions
 
 .nhstMeans <- function(x,...) 
@@ -43,6 +49,12 @@
   results <- results[[2]]
   rownames(results) <- rn
   results
+}
+
+testMeans <- function(...){
+  cat("\nHYPOTHESIS TESTS FOR THE MEANS\n\n")
+  print(.nhstMeans(...))
+  cat("\n")
 }
 
 ### Confidence Interval Plot Functions
@@ -68,3 +80,6 @@
   row.names(results) <- levels(x)
   .ciPlot(results,main,ylab,xlab,mu)
 }
+
+plotMeans <- function(...)
+  UseMethod(".cipMeans")
