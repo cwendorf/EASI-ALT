@@ -75,10 +75,10 @@ testDifference <- function(...){
 
 ### Confidence Interval Plot Functions
 
-.cipDifference <- function(x,...) 
-  UseMethod(".cipDifference")
+plotDifference <- function(x,...) 
+  UseMethod("plotDifference")
 
-.cipDifference.default <- function(...){
+plotDifference.default <- function(...){
   main <- "Confidence Intervals for the Comparison"
   ylab <- "Outcome"
   xlab <- ""
@@ -92,7 +92,7 @@ testDifference <- function(...){
   .diffPlot(results,graph,main,ylab,xlab)
 }
 
-.cipDifference.formula <- function(formula,...){
+plotDifference.formula <- function(formula,...){
   main <- "Confidence Intervals for the Comparison"
   ylab <- all.vars(formula)[1]
   xlab <- ""
@@ -104,6 +104,3 @@ testDifference <- function(...){
   graph <- rbind(Groups,Diff)
   .diffPlot(results,graph,main,ylab,xlab)
 }
-
-plotDifference <- function(x,...) 
-  UseMethod(".cipDifference")

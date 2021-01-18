@@ -59,10 +59,10 @@ testMeans <- function(...){
 
 ### Confidence Interval Plot Functions
 
-.cipMeans <- function(x,...) 
-  UseMethod(".cipMeans")
+plotMeans <- function(x,...) 
+  UseMethod("plotMeans")
 
-.cipMeans.default <- function(...,conf.level=.95,mu=NULL){
+plotMeans.default <- function(...,conf.level=.95,mu=NULL){
   main <- "Confidence Intervals for the Means"
   ylab <- "Outcome"
   xlab <- ""
@@ -70,7 +70,7 @@ testMeans <- function(...){
   .ciPlot(results,main,ylab,xlab,mu)
 }
 
-.cipMeans.formula <- function(formula,mu=NULL,...){
+plotMeans.formula <- function(formula,mu=NULL,...){
   main <- "Confidence Intervals for the Means"
   ylab <- all.vars(formula)[1]
   xlab <- ""
@@ -80,6 +80,3 @@ testMeans <- function(...){
   row.names(results) <- levels(x)
   .ciPlot(results,main,ylab,xlab,mu)
 }
-
-plotMeans <- function(...)
-  UseMethod(".cipMeans")

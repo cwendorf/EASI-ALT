@@ -129,10 +129,10 @@ testPairwise <- function(...){
 
 ### Confidence Interval Plot Functions
 
-.cipPairwise <- function(x,...) 
-  UseMethod(".cipPairwise")
+plotPairwise <- function(x,...) 
+  UseMethod("plotPairwise")
 
-.cipPairwise.default <- function(...,mu=NULL) {
+plotPairwise.default <- function(...,mu=NULL) {
   main <- "Confidence Intervals for the Pairwise Comparisons"
   ylab <- "Mean Difference"
   xlab <- ""
@@ -140,13 +140,10 @@ testPairwise <- function(...){
   .ciPlot(results,main,ylab,xlab,mu)
 } 
 
-.cipPairwise.formula <- function(formula,conf.level=.95,mu=NA,...) {
+plotPairwise.formula <- function(formula,conf.level=.95,mu=NA,...) {
   main <- "Confidence Intervals for the Pairwise Comparisons"
   ylab <- "Mean Difference"
   xlab <- ""
   results <- .ciPairwise(formula,...)[,c(1,4,5)]
   .ciPlot(results,main,ylab,xlab,mu)
 } 
-
-plotPairwise <- function(x,...) 
-  UseMethod(".cipPairwise")

@@ -79,10 +79,10 @@ testContrasts <- function(...){
 
 ### Confidence Interval Plot Functions
 
-.cipContrasts <- function(x,...) 
-  UseMethod(".cipContrasts")
+plotContrasts <- function(x,...) 
+  UseMethod("plotContrasts")
 
-.cipContrasts.default <- function(...,mu=NULL) {
+plotContrasts.default <- function(...,mu=NULL) {
   main <- "Confidence Intervals for the Contrasts"
   ylab <- "Mean Difference"
   xlab <- ""
@@ -90,13 +90,10 @@ testContrasts <- function(...){
   .ciPlot(results,main,ylab,xlab,mu)
 }  
 
-.cipContrasts.formula <- function(formula,mu=NULL,...) {
+plotContrasts.formula <- function(formula,mu=NULL,...) {
   main <- "Confidence Intervals for the Contrasts"
   ylab <- "Mean Difference"
   xlab <- ""
   results <- .ciContrasts(formula,...)[,c(1,3,4)]
   .ciPlot(results,main,ylab,xlab,mu)
 }
-
-plotContrasts <- function(x,...) 
-  UseMethod(".cipContrasts")

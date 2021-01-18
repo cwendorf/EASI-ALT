@@ -65,16 +65,13 @@ testRegression <- function(...){
 
 ### Confidence Interval Plot Functions
 
-.cipRegression <- function(x,...) 
-  UseMethod(".cipRegression")
+plotRegression <- function(x,...) 
+  UseMethod("plotRegression")
 
-.cipRegression.formula <- function(formula,mu=NULL,conf.level=.95,...) {
+plotRegression.formula <- function(formula,mu=NULL,conf.level=.95,...) {
   main <- "Regression Coefficients"
   ylab <- "Unstandardized Coefficient"
   xlab <- ""
   results <- .ciRegression(formula,conf.level=conf.level,...)[,c(1,3,4)]
   .ciPlot(results,main,ylab,xlab,mu)
 }
-
-plotRegression <- function(x,...) 
-  UseMethod(".cipRegression")
