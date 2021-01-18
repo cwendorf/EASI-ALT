@@ -59,7 +59,7 @@ testMeans <- function(...){
 
 ### Confidence Interval Plot Functions
 
-plotMeans <- function(x,...) 
+plotMeans <- function(...) 
   UseMethod("plotMeans")
 
 plotMeans.default <- function(...,conf.level=.95,mu=NULL){

@@ -3,7 +3,7 @@
 
 ### Plot Data
 
-plotData <- function(x,...)
+plotData <- function(...)
   UseMethod("plotData")
 
 plotData.default <- function(...,add=FALSE,main=NULL,ylab="Outcome",xlab="",method="jitter",col="gray60",pch=16) {
@@ -33,7 +33,7 @@ plotData.formula <- function(formula,add=FALSE,main=NULL,ylab=NULL,xlab="",metho
 
 ### Add Data to Plot
 
-addData <- function(x,...) 
+addData <- function(...) 
   UseMethod("addData")
 
 addData.default <- function(...,method="jitter",col="gray60",pch=16) {

@@ -75,7 +75,7 @@ testDifference <- function(...){
 
 ### Confidence Interval Plot Functions
 
-plotDifference <- function(x,...) 
+plotDifference <- function(...) 
   UseMethod("plotDifference")
 
 plotDifference.default <- function(...){

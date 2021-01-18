@@ -20,7 +20,7 @@ estimateHSD <- function(...){
 
 ### Null Hypothesis Significance Test Functions
 
-.nhstHSD <- function(x,...) 
+.nhstHSD <- function(...) 
   UseMethod(".nhstHSD")
 
 .nhstHSD.formula <- function(formula,conf.level=.95,...){

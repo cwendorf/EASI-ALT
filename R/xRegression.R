@@ -65,7 +65,7 @@ testRegression <- function(...){
 
 ### Confidence Interval Plot Functions
 
-plotRegression <- function(x,...) 
+plotRegression <- function(...) 
   UseMethod("plotRegression")
 
 plotRegression.formula <- function(formula,mu=NULL,conf.level=.95,...) {

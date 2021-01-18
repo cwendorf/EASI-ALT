@@ -129,7 +129,7 @@ testPairwise <- function(...){
 
 ### Confidence Interval Plot Functions
 
-plotPairwise <- function(x,...) 
+plotPairwise <- function(...) 
   UseMethod("plotPairwise")
 
 plotPairwise.default <- function(...,mu=NULL) {

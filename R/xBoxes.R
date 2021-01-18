@@ -31,7 +31,7 @@ describeBoxes <- function(...){
 
 #### Plot Functions for Boxes
 
-plotBoxes <- function(x,...) 
+plotBoxes <- function(...) 
   UseMethod("plotBoxes")
 
 plotBoxes.default <- function(...,main=NULL,ylab="Outcome",xlab="") {

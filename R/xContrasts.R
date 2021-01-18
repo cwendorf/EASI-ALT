@@ -79,7 +79,7 @@ testContrasts <- function(...){
 
 ### Confidence Interval Plot Functions
 
-plotContrasts <- function(x,...) 
+plotContrasts <- function(...) 
   UseMethod("plotContrasts")
 
 plotContrasts.default <- function(...,mu=NULL) {
