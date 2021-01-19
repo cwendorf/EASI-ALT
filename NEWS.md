@@ -1,6 +1,6 @@
 # Estimation Approach to Statistical Inference
 
-## EASI v2.210118
+## EASI v2.210119
 
 - Updated for R 4.0+
 - Added better function naming
