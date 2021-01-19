@@ -4,7 +4,7 @@
 source("http://raw.githubusercontent.com/cwendorf/EASIalt/master/R/xBasic.R")
 source("http://raw.githubusercontent.com/cwendorf/EASIalt/master/R/xData.R")
 source("http://raw.githubusercontent.com/cwendorf/EASIalt/master/R/xBoxes.R")
-source("http://raw.githubusercontent.com/cwendorf/EASIalt/master/R/xANOVA.R")
+source("http://raw.githubusercontent.com/cwendorf/EASIalt/master/R/xModel.R")
 source("http://raw.githubusercontent.com/cwendorf/EASIalt/master/R/xContrasts.R")
 source("http://raw.githubusercontent.com/cwendorf/EASIalt/master/R/xDifference.R")
 source("http://raw.githubusercontent.com/cwendorf/EASIalt/master/R/xMeans.R")
