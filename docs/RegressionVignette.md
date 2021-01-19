@@ -1,7 +1,7 @@
 ---
 title: "Estimation Approach to Statistical Inference"
 author: "Craig A. Wendorf"
-date: "2021-01-18"
+date: "2021-01-19"
 output: 
   rmarkdown::html_vignette:
     keep_md: TRUE
@@ -49,16 +49,38 @@ RegressionData
 
 
 ```r
-effectRegression(Outcome~Pred1+Pred2)
+effectModel(Outcome~Pred1+Pred2)
 ```
 
 ```
 ## 
 ## PROPORTION OF VARIANCE ACCOUNTED FOR
 ## 
-##          R    R2
-## Model 0.82 0.672
+##          R    R2 AdjR2
+## Model 0.82 0.672 0.563
 ```
+
+#### Significance Test of the Regression Model
+
+
+```r
+testModel(Outcome~Pred1+Pred2)
+```
+
+```
+## 
+## Analysis of Variance Table
+## 
+## Response: Outcome
+##           Df Sum Sq Mean Sq F value  Pr(>F)  
+## Pred1      1 90.750  90.750  6.5945 0.04245 *
+## Pred2      1 78.681  78.681  5.7175 0.05394 .
+## Residuals  6 82.569  13.761                  
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+```
+
+### Analyses of the Regression Coefficients
 
 #### Confidence Intervals for the Regression Coefficients
 

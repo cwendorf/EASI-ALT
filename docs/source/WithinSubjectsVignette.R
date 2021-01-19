@@ -10,7 +10,17 @@ Time3 <- c(8,8,9,9,9)
 WithinData <- data.frame(Time1,Time2,Time3)
 WithinData
 
-### Analyses of Multiple Variables
+### Analyses of a Model
+
+#### Overall Fit of a Model
+
+effectModel(Time1,Time2,Time3)
+
+#### Significance Test of a Model
+
+testModel(Time1,Time2,Time3)
+
+### Analyses of the Variable Means
 
 #### Confidence Intervals for the Means
 

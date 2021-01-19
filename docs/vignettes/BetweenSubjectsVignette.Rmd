@@ -34,7 +34,21 @@ BetweenData <- data.frame(Group,Outcome)
 BetweenData
 ```
 
-### Analyses of Multiple Groups
+### Analyses of a Model
+
+#### Overall Fit of a Model
+
+```{r}
+effectModel(Outcome~Group)
+```
+
+#### Significance Test of a Model
+
+```{r}
+testModel(Outcome~Group)
+```
+
+### Analyses of the Group Means
 
 #### Confidence Intervals for the Means
 

@@ -39,8 +39,16 @@ RegressionData
 #### Overall Fit of Regression Model
 
 ```{r}
-effectRegression(Outcome~Pred1+Pred2)
+effectModel(Outcome~Pred1+Pred2)
 ```
+
+#### Significance Test of the Regression Model
+
+```{r}
+testModel(Outcome~Pred1+Pred2)
+```
+
+### Analyses of the Regression Coefficients
 
 #### Confidence Intervals for the Regression Coefficients
 

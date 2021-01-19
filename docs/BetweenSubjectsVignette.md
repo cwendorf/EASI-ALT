@@ -1,7 +1,7 @@
 ---
 title: "Estimation Approach to Statistical Inference"
 author: "Craig A. Wendorf"
-date: "2021-01-18"
+date: "2021-01-19"
 output: 
   rmarkdown::html_vignette:
     keep_md: TRUE
@@ -43,7 +43,43 @@ BetweenData
 ## 9 Group3      10
 ```
 
-### Analyses of Multiple Groups
+### Analyses of a Model
+
+#### Overall Fit of a Model
+
+
+```r
+effectModel(Outcome~Group)
+```
+
+```
+## 
+## PROPORTION OF VARIANCE ACCOUNTED FOR
+## 
+##           R    R2 AdjR2
+## Model 0.935 0.875 0.833
+```
+
+#### Significance Test of a Model
+
+
+```r
+testModel(Outcome~Group)
+```
+
+```
+## 
+## Analysis of Variance Table
+## 
+## Response: Outcome
+##           Df Sum Sq Mean Sq F value   Pr(>F)   
+## Group      2     42      21      21 0.001953 **
+## Residuals  6      6       1                    
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+```
+
+### Analyses of the Group Means
 
 #### Confidence Intervals for the Means
 

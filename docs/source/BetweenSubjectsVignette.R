@@ -10,7 +10,17 @@ Group <- factor(Group,levels=c(1,2,3),labels=c("Group1","Group2","Group3"))
 BetweenData <- data.frame(Group,Outcome)
 BetweenData
 
-### Analyses of Multiple Groups
+### Analyses of a Model
+
+#### Overall Fit of a Model
+
+effectModel(Outcome~Group)
+
+#### Significance Test of a Model
+
+testModel(Outcome~Group)
+
+### Analyses of the Group Means
 
 #### Confidence Intervals for the Means
 
