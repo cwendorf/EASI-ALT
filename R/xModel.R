@@ -36,12 +36,12 @@ effectModel <- function(...){
   dataLong$Subjects <- as.factor(dataLong$Subjects)
   dataLong$Variables <- as.factor(dataLong$Variables)
   model <- lm(Outcome~Variables+Subjects,data=dataLong)
-  Model(model)
+  anova(model)
 }
 
 .nhstModel.formula <- function(formula,...){
   model <- lm(formula,...)
-  Model(model)
+  anova(model)
 }
 
 testModel <- function(...){
