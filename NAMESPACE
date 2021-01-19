@@ -1,9 +1,10 @@
 # Estimation Approach to Statistical Inference
 ## Operations to Make Function Available
 
-### xANOVA
+### xModel
 
-export(testANOVA)
+export(effectModel)
+export(testModel)
 
 ### xContrasts
 
@@ -61,7 +62,6 @@ export(plotPairwise)
 
 ### xRegression
 
-export(effectRegression)
 export(estimateRegression)
 export(testRegression)
 
