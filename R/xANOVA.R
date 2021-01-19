@@ -14,11 +14,26 @@
   dataLong$Variables <- as.factor(dataLong$Variables)
   model <- lm(Outcome~Variables+Subjects,data=dataLong)
   anova(model)
+  an <- anova(model)
+  results <- data.frame(an$`Sum Sq`,an$Df,an$`Mean Sq`,an$`F value`,an$`Pr(>F)`)
+  colnames(results) <- c("SS","df","MS","F","p")
+  rownames(results) <- c("Model","Residuals")
+  results= round(results,3)
+  results["Residuals","F"]=""
+  results["Residuals","p"]=""
+  results  
 }
 
 .nhstANOVA.formula <- function(formula,...){
   model <- lm(formula,...)
-  anova(model)
+  an <- anova(model)
+  results <- data.frame(an$`Sum Sq`,an$Df,an$`Mean Sq`,an$`F value`,an$`Pr(>F)`)
+  colnames(results) <- c("SS","df","MS","F","p")
+  rownames(results) <- c("Model","Residuals")
+  results <- round(results,3)
+  results["Residuals","F"]=""
+  results["Residuals","p"]=""
+  results
 }
 
 testANOVA <- function(...){
