@@ -34,7 +34,21 @@ WithinData <- data.frame(Time1,Time2,Time3)
 WithinData
 ```
 
-### Analyses of Multiple Variables
+### Analyses of a Model
+
+#### Overall Fit of a Model
+
+```{r}
+effectModel(Time1,Time2,Time3)
+```
+
+#### Significance Test of a Model
+
+```{r}
+testModel(Time1,Time2,Time3)
+```
+
+### Analyses of the Variable Means
 
 #### Confidence Intervals for the Means
 
