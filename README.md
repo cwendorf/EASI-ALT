@@ -28,7 +28,7 @@ The following vignettes are offered as tutorials. They show both the default out
 
 - The [_BetweenSubjectsVignette_](./docs/BetweenSubjectsVignette.md) analyzes data from a one-way between-subjects design.  
 - The [_WithinSubjectsVignette_](./docs/WithinSubjectsVignette.md) analyzes data from a single-factor within-subjects design.  
-- The [_RegressionVignette_](./docs/RegressionVignette.md) analyzes data from a single-factor within-subjects design. 
+- The [_RegressionVignette_](./docs/RegressionVignette.md) analyzes data from a multiple-variable design. 
 
 ### Contact Me
 
