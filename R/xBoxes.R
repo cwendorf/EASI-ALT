@@ -10,7 +10,7 @@
   data <- data.frame(...)
   results <- do.call(rbind,lapply(data,function(x) boxplot.stats(x)$stats))
   results <- round(results,3)
-  colnames(results) <- c("Lower Whisker","Lower Hinge","Median","Upper Hinge","Upper Whisker")
+  colnames(results) <- c("Min","LQ","Mdn","UQ","Max")
   results
 }
 
@@ -19,13 +19,13 @@
   rn <- results[,1]
   results <- results[[2]]
   rownames(results) <- rn
-  colnames(results) <- c("Lower Whisker","Lower Hinge","Median","Upper Hinge","Upper Whisker")
+  colnames(results) <- c("Min","LQ","Mdn","UQ","Max")
   results
 }
 
 describeBoxes <- function(...){
-  cat("\nBOX PLOTS FOR THE DATA\n\n")
-  print(.pvaRegression(...))
+  cat("\nBOX PLOT SUMMARIES FOR THE DATA\n\n")
+  print(.fnsBoxes(...))
   cat("\n")
 }
 
