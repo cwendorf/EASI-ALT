@@ -82,7 +82,7 @@ plotDifference.default <- function(...){
   main <- "Confidence Intervals for the Comparison"
   ylab <- "Outcome"
   xlab <- ""
-  Vars <- .ciMeans(...)[2:1,c(2,5,6)]
+  Vars <- .ciMeans(...)[2:1,c(1,4,5)]
   Diff <- .ciDifference(...)[1,c(1,4,5)]
   colnames(Diff)=c("M","LL","UL")  
   results <- rbind(Vars,Diff)
@@ -96,7 +96,7 @@ plotDifference.formula <- function(formula,...){
   main <- "Confidence Intervals for the Comparison"
   ylab <- all.vars(formula)[1]
   xlab <- ""
-  Groups <- .ciMeans(formula,...)[2:1,c(2,5,6)]
+  Groups <- .ciMeans(formula,...)[2:1,c(1,4,5)]
   Diff <- .ciDifference(formula,...)[1,c(1,4,5)]
   colnames(Diff)=c("M","LL","UL")
   results <- rbind(Groups,Diff)
