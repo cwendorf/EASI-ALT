@@ -44,6 +44,7 @@ export(plotDifference)
 
 ### xMeans
 
+export(describeMeans)
 export(estimateMeans)
 export(testMeans)
 
