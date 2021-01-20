@@ -1,6 +1,34 @@
 # Estimation Approach to Statistical Inference
 ## Functions for Means
 
+### Descriptive Functions 
+
+.dsMeans <- function(x,...) 
+  UseMethod(".dsMeans")
+
+.dsMeans.default <- function(...){
+  data <- data.frame(...)
+  results <- data.frame(matrix(ncol=3,nrow=0))
+  for (i in 1:ncol(data)) results[i,] <- .ds(data[,i])
+  colnames(results) <- c("N","M","SD")
+  rownames(results) <- colnames(data)
+  results
+}
+
+.dsMeans.formula <- function(formula,...) {
+  results <- aggregate(formula,FUN=.ds,...)
+  rn <- results[,1]
+  results <- results[[2]]
+  rownames(results) <- rn
+  results
+}
+
+describeMeans <- function(...){
+  cat("\nDESCRIPTIVE STATISTICS FOR THE DATA\n\n")
+  print(.dsMeans(...))
+  cat("\n")
+}
+
 ### Confidence Interval Functions 
 
 .ciMeans <- function(x,...) 
@@ -8,9 +36,9 @@
 
 .ciMeans.default <- function(...,conf.level=.95){
   data <- data.frame(...)
-  results <- data.frame(matrix(ncol=6,nrow=0))
+  results <- data.frame(matrix(ncol=5,nrow=0))
   for (i in 1:ncol(data)) results[i,] <- .ci(data[,i],conf.level=conf.level)
-  colnames(results) <- c("N","M","SD","SE","LL","UL")
+  colnames(results) <- c("M","SE","df","LL","UL")
   rownames(results) <- colnames(data)
   results
 }

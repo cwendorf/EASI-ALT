@@ -1,17 +1,25 @@
 # Estimation Approach to Statistical Inference
 ## Basic Functions
 
-### Confidence Interval Functions 
+### Descriptive Functions 
 
-.ci <- function(y,...){
+.ds <- function(y,...){
   N <- length(y)
   M <- mean(y,na.rm=TRUE)
   SD <- sd(y,na.rm=TRUE)
-  SE <- SD/sqrt(N)
+  round(c(N=N,M=M,SD=SD),3)
+}
+
+### Confidence Interval Functions 
+
+.ci <- function(y,...){
+  M <- mean(y,na.rm=TRUE)
   model <- t.test(y,...)
+  SE <- as.numeric(model$stderr)  
+  df <- as.numeric(model$parameter)
   LL <- as.numeric(model$conf.int[1])
   UL <- as.numeric(model$conf.int[2])
-  round(c(N=N,M=M,SD=SD,SE=SE,LL=LL,UL=UL),3)
+  round(c(M=M,SE=SE,df=df,LL=LL,UL=UL),3)
 }
 
 ### Null Hypothesis Significance Test Functions
