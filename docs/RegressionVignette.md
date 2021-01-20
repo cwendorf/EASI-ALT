@@ -28,6 +28,12 @@ Pred1 <- c(5,6,6,7,7,7,8,8,9)
 Pred2 <- c(6,7,8,8,7,9,7,9,9)
 Outcome <- c(72,69,75,84,72,81,75,84,81)
 RegressionData <- data.frame(Pred1,Pred2,Outcome)
+```
+
+#### Inspect Data
+
+
+```r
 RegressionData
 ```
 
@@ -44,8 +50,19 @@ RegressionData
 ## 9     9     9      81
 ```
 
-#### Descriptive Statistics
+```r
+plotData(Pred1,Pred2)
+```
 
+![](figures/unnamed-chunk-4-1.png)<!-- -->
+
+```r
+plotData(Outcome)
+```
+
+![](figures/unnamed-chunk-4-2.png)<!-- -->
+
+#### Descriptive Statistics
 
 
 ```r

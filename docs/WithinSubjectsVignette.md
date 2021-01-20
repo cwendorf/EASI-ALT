@@ -28,6 +28,12 @@ Time1 <- c(5,6,6,7,8)
 Time2 <- c(7,7,8,8,9)
 Time3 <- c(8,8,9,9,9)
 WithinData <- data.frame(Time1,Time2,Time3)
+```
+
+#### Inspect Data
+
+
+```r
 WithinData
 ```
 
@@ -40,8 +46,13 @@ WithinData
 ## 5     8     9     9
 ```
 
-#### Descriptive Statistics
+```r
+plotData(Time1,Time2,Time3)
+```
 
+![](figures/unnamed-chunk-4-1.png)<!-- -->
+
+#### Descriptive Statistics
 
 
 ```r

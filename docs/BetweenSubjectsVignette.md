@@ -28,6 +28,12 @@ Group <- c(rep(1,3),rep(2,3),rep(3,3))
 Outcome <- c(3,4,5,7,8,9,8,9,10)
 Group <- factor(Group,levels=c(1,2,3),labels=c("Group1","Group2","Group3"))
 BetweenData <- data.frame(Group,Outcome)
+```
+
+#### Inspect Data
+
+
+```r
 BetweenData
 ```
 
@@ -43,6 +49,12 @@ BetweenData
 ## 8 Group3       9
 ## 9 Group3      10
 ```
+
+```r
+plotData(Outcome~Group)
+```
+
+![](figures/unnamed-chunk-4-1.png)<!-- -->
 
 #### Descriptive Statistics
 
