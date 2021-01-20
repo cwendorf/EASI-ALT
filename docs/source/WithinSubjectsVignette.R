@@ -1,14 +1,19 @@
 # Estimation Approach to Statistical Inference
 ## Within Subjects Vignette
 
-### Three Time Period Example Data
+### Data Management
+
+#### Data Entry
 
 Time1 <- c(5,6,6,7,8)
 Time2 <- c(7,7,8,8,9)
 Time3 <- c(8,8,9,9,9)
-
 WithinData <- data.frame(Time1,Time2,Time3)
 WithinData
+
+#### Descriptive Statistics
+
+describeMeans(Time1,Time2,Time3)
 
 ### Analyses of a Model
 
