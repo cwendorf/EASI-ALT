@@ -1,7 +1,7 @@
 ---
 title: "Estimation Approach to Statistical Inference"
 author: "Craig A. Wendorf"
-date: "2021-01-19"
+date: "2021-01-20"
 output: 
   rmarkdown::html_vignette:
     keep_md: TRUE
@@ -18,14 +18,15 @@ vignette: >
 # Estimation Approach to Statistical Inference
 ## Within Subjects Vignette
 
-### Three Time Period Example Data
+### Data Management
+
+#### Data Entry
 
 
 ```r
 Time1 <- c(5,6,6,7,8)
 Time2 <- c(7,7,8,8,9)
 Time3 <- c(8,8,9,9,9)
-
 WithinData <- data.frame(Time1,Time2,Time3)
 WithinData
 ```
@@ -37,6 +38,24 @@ WithinData
 ## 3     6     8     9
 ## 4     7     8     9
 ## 5     8     9     9
+```
+
+#### Descriptive Statistics
+
+
+
+```r
+describeMeans(Time1,Time2,Time3)
+```
+
+```
+## 
+## DESCRIPTIVE STATISTICS FOR THE DATA
+## 
+##       N   M    SD
+## Time1 5 6.4 1.140
+## Time2 5 7.8 0.837
+## Time3 5 8.6 0.548
 ```
 
 ### Analyses of a Model
@@ -89,10 +108,10 @@ estimateMeans(Time1,Time2,Time3)
 ## 
 ## CONFIDENCE INTERVALS FOR THE MEANS
 ## 
-##       N   M    SD    SE    LL    UL
-## Time1 5 6.4 1.140 0.510 4.984 7.816
-## Time2 5 7.8 0.837 0.374 6.761 8.839
-## Time3 5 8.6 0.548 0.245 7.920 9.280
+##         M    SE df    LL    UL
+## Time1 6.4 0.510  4 4.984 7.816
+## Time2 7.8 0.374  4 6.761 8.839
+## Time3 8.6 0.245  4 7.920 9.280
 ```
 
 ```r
@@ -103,10 +122,10 @@ estimateMeans(Time1,Time2,Time3,conf.level=.99)
 ## 
 ## CONFIDENCE INTERVALS FOR THE MEANS
 ## 
-##       N   M    SD    SE    LL    UL
-## Time1 5 6.4 1.140 0.510 4.052 8.748
-## Time2 5 7.8 0.837 0.374 6.077 9.523
-## Time3 5 8.6 0.548 0.245 7.472 9.728
+##         M    SE df    LL    UL
+## Time1 6.4 0.510  4 4.052 8.748
+## Time2 7.8 0.374  4 6.077 9.523
+## Time3 8.6 0.245  4 7.472 9.728
 ```
 
 #### Plots of Confidence Intervals for the Means

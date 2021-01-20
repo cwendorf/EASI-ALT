@@ -1,7 +1,7 @@
 ---
 title: "Estimation Approach to Statistical Inference"
 author: "Craig A. Wendorf"
-date: "2021-01-19"
+date: "2021-01-20"
 output: 
   rmarkdown::html_vignette:
     keep_md: TRUE
@@ -18,14 +18,15 @@ vignette: >
 # Estimation Approach to Statistical Inference
 ## Multiple Regression Vignette
 
-### Three Variable Example Data
+### Data Management
+
+#### Data Entry
 
 
 ```r
 Pred1 <- c(5,6,6,7,7,7,8,8,9)
 Pred2 <- c(6,7,8,8,7,9,7,9,9)
 Outcome <- c(72,69,75,84,72,81,75,84,81)
-
 RegressionData <- data.frame(Pred1,Pred2,Outcome)
 RegressionData
 ```
@@ -41,6 +42,24 @@ RegressionData
 ## 7     8     7      75
 ## 8     8     9      84
 ## 9     9     9      81
+```
+
+#### Descriptive Statistics
+
+
+
+```r
+describeMeans(Pred1,Pred2,Outcome)
+```
+
+```
+## 
+## DESCRIPTIVE STATISTICS FOR THE DATA
+## 
+##         N      M    SD
+## Pred1   9  7.000 1.225
+## Pred2   9  7.778 1.093
+## Outcome 9 77.000 5.612
 ```
 
 ### Analyses of a Regression Model

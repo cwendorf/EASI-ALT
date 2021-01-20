@@ -1,7 +1,7 @@
 ---
 title: "Estimation Approach to Statistical Inference"
 author: "Craig A. Wendorf"
-date: "2021-01-19"
+date: "2021-01-20"
 output: 
   rmarkdown::html_vignette:
     keep_md: TRUE
@@ -18,14 +18,15 @@ vignette: >
 # Estimation Approach to Statistical Inference
 ## Between Subjects Vignette
 
-### Three Group Example Data
+### Data Management
+
+#### Data Entry
 
 
 ```r
 Group <- c(rep(1,3),rep(2,3),rep(3,3))
 Outcome <- c(3,4,5,7,8,9,8,9,10)
 Group <- factor(Group,levels=c(1,2,3),labels=c("Group1","Group2","Group3"))
-
 BetweenData <- data.frame(Group,Outcome)
 BetweenData
 ```
@@ -41,6 +42,23 @@ BetweenData
 ## 7 Group3       8
 ## 8 Group3       9
 ## 9 Group3      10
+```
+
+#### Descriptive Statistics
+
+
+```r
+describeMeans(Outcome~Group)
+```
+
+```
+## 
+## DESCRIPTIVE STATISTICS FOR THE DATA
+## 
+##        N M SD
+## Group1 3 4  1
+## Group2 3 8  1
+## Group3 3 9  1
 ```
 
 ### Analyses of a Model
@@ -92,10 +110,10 @@ estimateMeans(Outcome~Group)
 ## 
 ## CONFIDENCE INTERVALS FOR THE MEANS
 ## 
-##        N M SD    SE    LL     UL
-## Group1 3 4  1 0.577 1.516  6.484
-## Group2 3 8  1 0.577 5.516 10.484
-## Group3 3 9  1 0.577 6.516 11.484
+##        M    SE df    LL     UL
+## Group1 4 0.577  2 1.516  6.484
+## Group2 8 0.577  2 5.516 10.484
+## Group3 9 0.577  2 6.516 11.484
 ```
 
 ```r
@@ -106,10 +124,10 @@ estimateMeans(Outcome~Group,conf.level=.99)
 ## 
 ## CONFIDENCE INTERVALS FOR THE MEANS
 ## 
-##        N M SD    SE    LL    UL
-## Group1 3 4  1 0.577 -1.73  9.73
-## Group2 3 8  1 0.577  2.27 13.73
-## Group3 3 9  1 0.577  3.27 14.73
+##        M    SE df    LL    UL
+## Group1 4 0.577  2 -1.73  9.73
+## Group2 8 0.577  2  2.27 13.73
+## Group3 9 0.577  2  3.27 14.73
 ```
 
 #### Plot of the Confidence Intervals for the Means
