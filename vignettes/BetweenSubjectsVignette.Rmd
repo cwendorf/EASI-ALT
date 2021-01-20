@@ -36,7 +36,7 @@ BetweenData <- data.frame(Group,Outcome)
 
 #### Inspect Data
 
-```{r}
+```{r,Between-Data}
 BetweenData
 plotData(Outcome~Group)
 ```

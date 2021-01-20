@@ -54,7 +54,7 @@ BetweenData
 plotData(Outcome~Group)
 ```
 
-![](figures/unnamed-chunk-4-1.png)<!-- -->
+![](figures/Between-Data-1.png)<!-- -->
 
 #### Descriptive Statistics
 

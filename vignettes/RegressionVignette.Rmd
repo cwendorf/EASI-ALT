@@ -36,7 +36,7 @@ RegressionData <- data.frame(Pred1,Pred2,Outcome)
 
 #### Inspect Data
 
-```{r}
+```{r,Regression-Data}
 RegressionData
 plotData(Pred1,Pred2)
 plotData(Outcome)
@@ -73,7 +73,7 @@ estimateRegression(Outcome~Pred1+Pred2,conf.level=.99)
 
 #### Plot of the Confidence Intervals for the Regression Coefficients
 
-```{r,Regression}
+```{r,Regression-Coefficients}
 plotRegression(Outcome~Pred1+Pred2)
 plotRegression(Outcome~Pred1+Pred2,conf.level=.99)
 ```

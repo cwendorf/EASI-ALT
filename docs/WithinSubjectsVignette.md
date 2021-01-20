@@ -50,7 +50,7 @@ WithinData
 plotData(Time1,Time2,Time3)
 ```
 
-![](figures/unnamed-chunk-4-1.png)<!-- -->
+![](figures/Within-Data-1.png)<!-- -->
 
 #### Descriptive Statistics
 

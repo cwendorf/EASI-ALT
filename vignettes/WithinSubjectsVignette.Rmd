@@ -36,7 +36,7 @@ WithinData <- data.frame(Time1,Time2,Time3)
 
 #### Inspect Data
 
-```{r}
+```{r,Within-Data}
 WithinData
 plotData(Time1,Time2,Time3)
 ```

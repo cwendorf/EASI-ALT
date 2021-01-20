@@ -54,13 +54,13 @@ RegressionData
 plotData(Pred1,Pred2)
 ```
 
-![](figures/unnamed-chunk-4-1.png)<!-- -->
+![](figures/Regression-Data-1.png)<!-- -->
 
 ```r
 plotData(Outcome)
 ```
 
-![](figures/unnamed-chunk-4-2.png)<!-- -->
+![](figures/Regression-Data-2.png)<!-- -->
 
 #### Descriptive Statistics
 
@@ -156,13 +156,13 @@ estimateRegression(Outcome~Pred1+Pred2,conf.level=.99)
 plotRegression(Outcome~Pred1+Pred2)
 ```
 
-![](figures/Regression-1.png)<!-- -->
+![](figures/Regression-Coefficients-1.png)<!-- -->
 
 ```r
 plotRegression(Outcome~Pred1+Pred2,conf.level=.99)
 ```
 
-![](figures/Regression-2.png)<!-- -->
+![](figures/Regression-Coefficients-2.png)<!-- -->
 
 #### Significance Tests for the Regression Coefficients
 
