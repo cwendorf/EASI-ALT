@@ -3,7 +3,7 @@
 ## EASI v2.210119
 
 - Updated for R 4.0+
-- Added better function naming
+- Updated function naming
 - Added titles to table printing
 
 ## EASI v2.200512
