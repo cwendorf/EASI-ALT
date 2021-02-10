@@ -1,7 +1,7 @@
 ---
 title: "Estimation Approach to Statistical Inference"
 author: "Craig A. Wendorf"
-date: "2021-01-20"
+date: "2021-02-10"
 output: 
   rmarkdown::html_vignette:
     keep_md: TRUE
@@ -71,16 +71,33 @@ describeMeans(Time1,Time2,Time3)
 
 ### Analyses of a Model
 
-#### Overall Fit of a Model
+#### Describe a Model
 
 
 ```r
-effectModel(Time1,Time2,Time3)
+describeModel(Time1,Time2,Time3)
 ```
 
 ```
 ## 
-## PROPORTION OF VARIANCE ACCOUNTED FOR
+## SOURCE TABLE FOR THE MODEL
+## 
+##             SS df  MS
+## Variables 12.4  2 6.2
+## Subjects   7.6  4 1.9
+## Residual   1.6  8 0.2
+```
+
+#### Overall Fit of a Model
+
+
+```r
+fitModel(Time1,Time2,Time3)
+```
+
+```
+## 
+## PROPORTION OF VARIANCE ACCOUNTED FOR BY THE MODEL
 ## 
 ##           R    R2 AdjR2
 ## Model 0.962 0.926  0.87
@@ -95,15 +112,10 @@ testModel(Time1,Time2,Time3)
 
 ```
 ## 
-## Analysis of Variance Table
+## HYPOTHESIS TEST FOR THE MODEL
 ## 
-## Response: Outcome
-##           Df Sum Sq Mean Sq F value    Pr(>F)    
-## Variables  2   12.4     6.2    31.0 0.0001706 ***
-## Subjects   4    7.6     1.9     9.5 0.0039376 ** 
-## Residuals  8    1.6     0.2                      
-## ---
-## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+##            F df1 df2 p
+## Model 16.667   6   8 0
 ```
 
 ### Analyses of the Variable Means
