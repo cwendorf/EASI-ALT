@@ -1,10 +1,11 @@
 # Estimation Approach to Statistical Inference
 
-## EASI v2.210119
+## EASI v2.210210
 
 - Updated for R 4.0+
 - Updated function naming
 - Added titles to table printing
+- Separated out descriptive statistics
 
 ## EASI v2.200512
 
