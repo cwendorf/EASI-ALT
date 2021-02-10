@@ -8,7 +8,7 @@
 
 ### Installation
 
-This package is not currently on CRAN, but but the latest stable release can be installed directly from GitHub:
+This package is not currently on CRAN, but the latest stable release can be installed from GitHub:
 
 ```r
 install.packages("devtools")
@@ -16,7 +16,7 @@ devtools::install_github("cwendorf/EASIalt@*release")
 library(EASIalt)
 ```
 
-To get a bug fix or to use the newest features, you can install the development version from GitHub:
+To get a bug fix or to use the newest features, install the development version from GitHub:
 
 ``` r
 install.packages("devtools")
@@ -29,7 +29,6 @@ If you do not wish a full install, the latest functions can be sourced directly 
 ```r
 source("http://raw.githubusercontent.com/cwendorf/EASIalt/main/sourceEASIalt.R")
 ```
-
 
 ### Usage
 
