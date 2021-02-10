@@ -10,7 +10,6 @@ Time2 <- c(7,7,8,8,9)
 Time3 <- c(8,8,9,9,9)
 WithinData <- data.frame(Time1,Time2,Time3)
 
-
 ### Inspect Data
 
 WithinData
@@ -22,9 +21,13 @@ describeMeans(Time1,Time2,Time3)
 
 ### Analyses of a Model
 
+#### Describe a Model
+
+describeModel(Time1,Time2,Time3)
+
 #### Overall Fit of a Model
 
-effectModel(Time1,Time2,Time3)
+fitModel(Time1,Time2,Time3)
 
 #### Significance Test of a Model
 

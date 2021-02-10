@@ -49,10 +49,16 @@ describeMeans(Time1,Time2,Time3)
 
 ### Analyses of a Model
 
+#### Describe a Model
+
+```{r}
+describeModel(Time1,Time2,Time3)
+```
+
 #### Overall Fit of a Model
 
 ```{r}
-effectModel(Time1,Time2,Time3)
+fitModel(Time1,Time2,Time3)
 ```
 
 #### Significance Test of a Model

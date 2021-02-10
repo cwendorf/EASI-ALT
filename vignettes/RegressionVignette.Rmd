@@ -53,7 +53,7 @@ describeMeans(Pred1,Pred2,Outcome)
 #### Overall Fit of Regression Model
 
 ```{r}
-effectModel(Outcome~Pred1+Pred2)
+describeModel(Outcome~Pred1+Pred2)
 ```
 
 #### Significance Test of the Regression Model

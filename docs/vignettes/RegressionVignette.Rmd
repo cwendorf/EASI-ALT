@@ -50,10 +50,16 @@ describeMeans(Pred1,Pred2,Outcome)
 
 ### Analyses of a Regression Model
 
+#### Describe a Regression Model
+
+```{r}
+describeModel(Outcome~Pred1+Pred2)
+```
+
 #### Overall Fit of Regression Model
 
 ```{r}
-effectModel(Outcome~Pred1+Pred2)
+fitModel(Outcome~Pred1+Pred2)
 ```
 
 #### Significance Test of the Regression Model

@@ -3,7 +3,8 @@
 
 ### xModel
 
-export(effectModel)
+export(describeModel)
+export(fitModel)
 export(testModel)
 
 ### xContrasts

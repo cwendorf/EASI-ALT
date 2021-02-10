@@ -21,9 +21,13 @@ describeMeans(Outcome~Group)
 
 ### Analyses of a Model
 
+#### Describe a Model
+
+describeModel(Outcome~Group)
+
 #### Overall Fit of a Model
 
-effectModel(Outcome~Group)
+fitModel(Outcome~Group)
 
 #### Significance Test of a Model
 

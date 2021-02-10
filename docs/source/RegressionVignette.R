@@ -10,7 +10,6 @@ Pred2 <- c(6,7,8,8,7,9,7,9,9)
 Outcome <- c(72,69,75,84,72,81,75,84,81)
 RegressionData <- data.frame(Pred1,Pred2,Outcome)
 
-
 ### Inspect Data
 
 RegressionData
@@ -23,9 +22,13 @@ describeMeans(Pred1,Pred2,Outcome)
 
 ### Analyses of a Regression Model
 
-#### Overall Fit of Regression Model
+#### Describe the Regression Model
 
-effectModel(Outcome~Pred1+Pred2)
+describeModel(Outcome~Pred1+Pred2)
+
+#### Overall Fit of the Regression Model
+
+fitModel(Outcome~Pred1+Pred2)
 
 #### Significance Test of the Regression Model
 

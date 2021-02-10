@@ -2,7 +2,7 @@ Package: EASIalt
 Type: Package
 Title: Estimation Approach to Statistical Inference
 Description: An R package to estimate, test, and plot confidence intervals 
-Version: 2.210119
+Version: 2.210210
 Depends: R (>= 3.5.0)
 Author: Craig A Wendorf <cwendorf@uwsp.edu>
 Maintainer: Craig A Wendorf <cwendorf@uwsp.edu>
