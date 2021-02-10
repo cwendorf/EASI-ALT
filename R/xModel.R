@@ -91,7 +91,7 @@ fitModel <- function(...){
   F <- x[[10]][1]
   df1 <- x[[10]][2]
   df2 <- x[[10]][3]
-  p <- pf(q,df1,df2,lower.tail=FALSE)
+  p <- pf(F,df1,df2,lower.tail=FALSE)
   results <- c(F,df1,df2,p)
   results <- rbind(results)
   colnames(results) <- c("F","df1","df2","p")
@@ -105,7 +105,7 @@ fitModel <- function(...){
   F <- x[[10]][1]
   df1 <- x[[10]][2]
   df2 <- x[[10]][3]
-  p <- pf(q,df1,df2,lower.tail=FALSE)
+  p <- pf(F,df1,df2,lower.tail=FALSE)
   results <- c(F,df1,df2,p)
   results <- rbind(results)
   colnames(results) <- c("F","df1","df2","p")
