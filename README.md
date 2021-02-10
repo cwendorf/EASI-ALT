@@ -11,6 +11,7 @@
 This package is not currently on CRAN, but but the latest stable release can be installed directly from GitHub:
 
 ```r
+install.packages("devtools")
 devtools::install_github("cwendorf/EASIalt@*release")
 library(EASIalt)
 ```
