@@ -12,7 +12,7 @@ This package is not currently on CRAN, but the latest stable release can be inst
 
 ```r
 install.packages("devtools")
-devtools::install_github("cwendorf/EASIalt@*release")
+devtools::install_github("cwendorf/EASIalt@*release",build_vignettes=TRUE)
 library(EASIalt)
 ```
 
