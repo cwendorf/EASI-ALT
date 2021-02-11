@@ -1,7 +1,7 @@
 ---
 title: "Estimation Approach to Statistical Inference"
 author: "Craig A. Wendorf"
-date: "2021-02-10"
+date: "2021-02-11"
 output: 
   rmarkdown::html_vignette:
     keep_md: TRUE
@@ -132,9 +132,9 @@ estimateMeans(Time1,Time2,Time3)
 ## CONFIDENCE INTERVALS FOR THE MEANS
 ## 
 ##         M    SE df    LL    UL
-## Time1 6.4 0.510  4 4.984 7.816
-## Time2 7.8 0.374  4 6.761 8.839
-## Time3 8.6 0.245  4 7.920 9.280
+## Time1 6.4 0.392 12 5.547 7.253
+## Time2 7.8 0.392 12 6.947 8.653
+## Time3 8.6 0.392 12 7.747 9.453
 ```
 
 ```r
@@ -146,9 +146,9 @@ estimateMeans(Time1,Time2,Time3,conf.level=.99)
 ## CONFIDENCE INTERVALS FOR THE MEANS
 ## 
 ##         M    SE df    LL    UL
-## Time1 6.4 0.510  4 4.052 8.748
-## Time2 7.8 0.374  4 6.077 9.523
-## Time3 8.6 0.245  4 7.472 9.728
+## Time1 6.4 0.392 12 5.204 7.596
+## Time2 7.8 0.392 12 6.604 8.996
+## Time3 8.6 0.392 12 7.404 9.796
 ```
 
 #### Plots of Confidence Intervals for the Means
@@ -177,10 +177,10 @@ testMeans(Time1,Time2,Time3)
 ## 
 ## HYPOTHESIS TESTS FOR THE MEANS
 ## 
-##       Diff    SE      t df p
-## Time1  6.4 0.510 12.551  4 0
-## Time2  7.8 0.374 20.846  4 0
-## Time3  8.6 0.245 35.109  4 0
+##       Diff    SE df      t p
+## Time1  6.4 0.392 12 16.344 0
+## Time2  7.8 0.392 12 19.919 0
+## Time3  8.6 0.392 12 21.962 0
 ```
 
 ```r
@@ -191,10 +191,10 @@ testMeans(Time1,Time2,Time3,mu=6)
 ## 
 ## HYPOTHESIS TESTS FOR THE MEANS
 ## 
-##       Diff    SE      t df     p
-## Time1  0.4 0.510  0.784  4 0.477
-## Time2  1.8 0.374  4.811  4 0.009
-## Time3  2.6 0.245 10.614  4 0.000
+##       Diff    SE df     t     p
+## Time1  0.4 0.392 12 1.022 0.327
+## Time2  1.8 0.392 12 4.597 0.001
+## Time3  2.6 0.392 12 6.640 0.000
 ```
 
 ### Analyses of a Variable Comparison

@@ -1,7 +1,7 @@
 ---
 title: "Estimation Approach to Statistical Inference"
 author: "Craig A. Wendorf"
-date: "2021-02-10"
+date: "2021-02-11"
 output: 
   rmarkdown::html_vignette:
     keep_md: TRUE
@@ -135,9 +135,9 @@ estimateMeans(Outcome~Group)
 ## CONFIDENCE INTERVALS FOR THE MEANS
 ## 
 ##        M    SE df    LL     UL
-## Group1 4 0.577  2 1.516  6.484
-## Group2 8 0.577  2 5.516 10.484
-## Group3 9 0.577  2 6.516 11.484
+## Group1 4 0.577  6 2.587  5.413
+## Group2 8 0.577  6 6.587  9.413
+## Group3 9 0.577  6 7.587 10.413
 ```
 
 ```r
@@ -148,10 +148,10 @@ estimateMeans(Outcome~Group,conf.level=.99)
 ## 
 ## CONFIDENCE INTERVALS FOR THE MEANS
 ## 
-##        M    SE df    LL    UL
-## Group1 4 0.577  2 -1.73  9.73
-## Group2 8 0.577  2  2.27 13.73
-## Group3 9 0.577  2  3.27 14.73
+##        M    SE df   LL    UL
+## Group1 4 0.577  6 1.86  6.14
+## Group2 8 0.577  6 5.86 10.14
+## Group3 9 0.577  6 6.86 11.14
 ```
 
 #### Plot of the Confidence Intervals for the Means
@@ -180,10 +180,10 @@ testMeans(Outcome~Group)
 ## 
 ## HYPOTHESIS TESTS FOR THE MEANS
 ## 
-##        Diff    SE      t df     p
-## Group1    4 0.577  6.928  2 0.020
-## Group2    8 0.577 13.856  2 0.005
-## Group3    9 0.577 15.588  2 0.004
+##        Diff    SE df      t p
+## Group1    4 0.577  6  6.928 0
+## Group2    8 0.577  6 13.856 0
+## Group3    9 0.577  6 15.588 0
 ```
 
 ```r
@@ -194,10 +194,10 @@ testMeans(Outcome~Group,mu=5)
 ## 
 ## HYPOTHESIS TESTS FOR THE MEANS
 ## 
-##        Diff    SE      t df     p
-## Group1   -1 0.577 -1.732  2 0.225
-## Group2    3 0.577  5.196  2 0.035
-## Group3    4 0.577  6.928  2 0.020
+##        Diff    SE df      t     p
+## Group1   -1 0.577  6 -1.732 0.134
+## Group2    3 0.577  6  5.196 0.002
+## Group3    4 0.577  6  6.928 0.000
 ```
 
 ### Analyses of a Group Comparison
