@@ -9,6 +9,7 @@
 .dsMeans.default <- function(...){
   data <- data.frame(...)
   rn <- names(data)
+  N <- sapply(data,length,na.rm=TRUE)
   M <- sapply(data,mean,na.rm=TRUE)
   SD <- sapply(data,sd,na.rm=TRUE) 
   results <- cbind(N=N,M=M,SD=SD)
