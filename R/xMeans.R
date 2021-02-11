@@ -44,8 +44,8 @@ describeMeans <- function(...){
   dataLong$Subjects <- as.factor(dataLong$Subjects)
   dataLong$Variables <- as.factor(dataLong$Variables)
   model <- lm(Outcome~Variables-1,data=dataLong)
-  results <- cbind(summary(model)$coeff[,1:2],confint(model,level=conf.level))
-  colnames(results) <- c("M","SE","LL","UL")
+  results <- cbind(summary(model)$coeff[,1:2],model$df.residual,confint(model,level=conf.level))
+  colnames(results) <- c("M","SE","df","LL","UL")
   rownames(results) <- names(data)
   round(results,3)
 }
@@ -54,8 +54,8 @@ describeMeans <- function(...){
   x <- eval(formula[[3]])
   formula <- update(formula, ~ . + -1)
   model <- lm(formula)
-  results <- cbind(summary(model)$coeff[,1:2],confint(model,level=conf.level))
-  colnames(results) <- c("M","SE","LL","UL")
+  results <- cbind(summary(model)$coeff[,1:2],model$df.residual,confint(model,level=conf.level))
+  colnames(results) <- c("M","SE","df","LL","UL")
   rownames(results) <- levels(x)
   round(results,3)
 }
@@ -78,11 +78,12 @@ estimateMeans <- function(...) {
   dataLong$Subjects <- as.factor(dataLong$Subjects)
   dataLong$Variables <- as.factor(dataLong$Variables)
   model <- lm(Outcome~Variables-1,data=dataLong)
-  results <- summary(model)$coeff
+  results <- cbind(summary(model)$coeff,1)
   results[,1] <- results[,1]-mu
-  results[,3] <- results[,1]/results[,2]
-  results[,4] <- 2*pt(-abs(results[,3]),df=model$df.residual)
-  colnames(results) <- c("Diff","SE","t","p")
+  results[,3] <- model$df.residual
+  results[,4] <- results[,1]/results[,2]
+  results[,5] <- 2*pt(-abs(results[,4]),df=results[,3])
+  colnames(results) <- c("Diff","SE","df","t","p")
   rownames(results) <- names(data)
   round(results,3)  
 }
@@ -91,11 +92,12 @@ estimateMeans <- function(...) {
   x <- eval(formula[[3]])
   formula <- update(formula, ~ . + -1)
   model <- lm(formula)
-  results <- summary(model)$coeff
+  results <- cbind(summary(model)$coeff,1)
   results[,1] <- results[,1]-mu
-  results[,3] <- results[,1]/results[,2]
-  results[,4] <- 2*pt(-abs(results[,3]),df=model$df.residual)
-  colnames(results) <- c("Diff","SE","t","p")
+  results[,3] <- model$df.residual
+  results[,4] <- results[,1]/results[,2]
+  results[,5] <- 2*pt(-abs(results[,4]),df=results[,3])
+  colnames(results) <- c("Diff","SE","df","t","p")
   rownames(results) <- levels(x)
   round(results,3)
 }
