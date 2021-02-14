@@ -1,7 +1,7 @@
 ---
 title: "Estimation Approach to Statistical Inference"
 author: "Craig A. Wendorf"
-date: "2021-02-11"
+date: "2021-02-14"
 output: 
   rmarkdown::html_vignette:
     keep_md: TRUE
@@ -47,7 +47,8 @@ WithinData
 ```
 
 ```r
-plotData(Time1,Time2,Time3)
+plotBoxes(Time1,Time2,Time3)
+addData(Time1,Time2,Time3)
 ```
 
 ![](figures/Within-Data-1.png)<!-- -->
@@ -177,10 +178,10 @@ testMeans(Time1,Time2,Time3)
 ## 
 ## HYPOTHESIS TESTS FOR THE MEANS
 ## 
-##       Diff    SE df      t p
-## Time1  6.4 0.392 12 16.344 0
-## Time2  7.8 0.392 12 19.919 0
-## Time3  8.6 0.392 12 21.962 0
+##       Diff    SE      t df p
+## Time1  6.4 0.392 16.344 12 0
+## Time2  7.8 0.392 19.919 12 0
+## Time3  8.6 0.392 21.962 12 0
 ```
 
 ```r
@@ -191,10 +192,10 @@ testMeans(Time1,Time2,Time3,mu=6)
 ## 
 ## HYPOTHESIS TESTS FOR THE MEANS
 ## 
-##       Diff    SE df     t     p
-## Time1  0.4 0.392 12 1.022 0.327
-## Time2  1.8 0.392 12 4.597 0.001
-## Time3  2.6 0.392 12 6.640 0.000
+##       Diff    SE     t df     p
+## Time1  0.4 0.392 1.022 12 0.327
+## Time2  1.8 0.392 4.597 12 0.001
+## Time3  2.6 0.392 6.640 12 0.000
 ```
 
 ### Analyses of a Variable Comparison

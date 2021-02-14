@@ -13,7 +13,8 @@ WithinData <- data.frame(Time1,Time2,Time3)
 ### Inspect Data
 
 WithinData
-plotData(Time1,Time2,Time3)
+plotBoxes(Time1,Time2,Time3)
+addData(Time1,Time2,Time3)
 
 #### Descriptive Statistics
 

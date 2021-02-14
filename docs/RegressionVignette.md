@@ -1,7 +1,7 @@
 ---
 title: "Estimation Approach to Statistical Inference"
 author: "Craig A. Wendorf"
-date: "2021-02-11"
+date: "2021-02-14"
 output: 
   rmarkdown::html_vignette:
     keep_md: TRUE
@@ -51,13 +51,15 @@ RegressionData
 ```
 
 ```r
-plotData(Pred1,Pred2)
+plotBoxes(Pred1,Pred2)
+addData(Pred1,Pred2)
 ```
 
 ![](figures/Regression-Data-1.png)<!-- -->
 
 ```r
-plotData(Outcome)
+plotBoxes(Outcome)
+addData(Outcome)
 ```
 
 ![](figures/Regression-Data-2.png)<!-- -->

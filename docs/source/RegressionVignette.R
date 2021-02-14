@@ -13,8 +13,10 @@ RegressionData <- data.frame(Pred1,Pred2,Outcome)
 ### Inspect Data
 
 RegressionData
-plotData(Pred1,Pred2)
-plotData(Outcome)
+plotBoxes(Pred1,Pred2)
+addData(Pred1,Pred2)
+plotBoxes(Outcome)
+addData(Outcome)
 
 #### Descriptive Statistics
 

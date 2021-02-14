@@ -1,7 +1,7 @@
 ---
 title: "Estimation Approach to Statistical Inference"
 author: "Craig A. Wendorf"
-date: "2021-02-11"
+date: "2021-02-14"
 output: 
   rmarkdown::html_vignette:
     keep_md: TRUE
@@ -51,7 +51,8 @@ BetweenData
 ```
 
 ```r
-plotData(Outcome~Group)
+plotBoxes(Outcome~Group)
+addData(Outcome~Group)
 ```
 
 ![](figures/Between-Data-1.png)<!-- -->
@@ -180,10 +181,10 @@ testMeans(Outcome~Group)
 ## 
 ## HYPOTHESIS TESTS FOR THE MEANS
 ## 
-##        Diff    SE df      t p
-## Group1    4 0.577  6  6.928 0
-## Group2    8 0.577  6 13.856 0
-## Group3    9 0.577  6 15.588 0
+##        Diff    SE      t df p
+## Group1    4 0.577  6.928  6 0
+## Group2    8 0.577 13.856  6 0
+## Group3    9 0.577 15.588  6 0
 ```
 
 ```r
@@ -194,10 +195,10 @@ testMeans(Outcome~Group,mu=5)
 ## 
 ## HYPOTHESIS TESTS FOR THE MEANS
 ## 
-##        Diff    SE df      t     p
-## Group1   -1 0.577  6 -1.732 0.134
-## Group2    3 0.577  6  5.196 0.002
-## Group3    4 0.577  6  6.928 0.000
+##        Diff    SE      t df     p
+## Group1   -1 0.577 -1.732  6 0.134
+## Group2    3 0.577  5.196  6 0.002
+## Group3    4 0.577  6.928  6 0.000
 ```
 
 ### Analyses of a Group Comparison
