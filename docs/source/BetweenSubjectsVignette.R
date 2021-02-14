@@ -13,7 +13,9 @@ BetweenData <- data.frame(Group,Outcome)
 #### Inspect Data
 
 BetweenData
-plotData(Outcome~Group)
+
+plotBoxes(Outcome~Group)
+addData(Outcome~Group)
 
 #### Descriptive Statistics
 

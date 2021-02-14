@@ -38,7 +38,8 @@ BetweenData <- data.frame(Group,Outcome)
 
 ```{r,Between-Data}
 BetweenData
-plotData(Outcome~Group)
+plotBoxes(Outcome~Group)
+addData(Outcome~Group)
 ```
 
 #### Descriptive Statistics
