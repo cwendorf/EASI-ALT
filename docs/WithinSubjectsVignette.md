@@ -1,7 +1,7 @@
 ---
 title: "Estimation Approach to Statistical Inference"
 author: "Craig A. Wendorf"
-date: "2021-02-14"
+date: "2021-02-19"
 output: 
   rmarkdown::html_vignette:
     keep_md: TRUE
@@ -373,10 +373,10 @@ estimateContrasts(Time1,Time2,Time3,contrasts=contr.sum)
 ## 
 ## CONFIDENCE INTERVALS FOR THE CONTRASTS
 ## 
-##              Est    SE     LL     UL
-## (Intercept)  7.6 0.115  7.334  7.866
-## Variable1   -1.2 0.163 -1.577 -0.823
-## Variable2    0.2 0.163 -0.177  0.577
+##              Est    SE df     LL     UL
+## (Intercept)  7.6 0.115  8  7.334  7.866
+## Variable1   -1.2 0.163  8 -1.577 -0.823
+## Variable2    0.2 0.163  8 -0.177  0.577
 ```
 
 ```r
@@ -387,10 +387,10 @@ estimateContrasts(Time1,Time2,Time3,contrasts=contr.sum,conf.level=.99)
 ## 
 ## CONFIDENCE INTERVALS FOR THE CONTRASTS
 ## 
-##              Est    SE     LL     UL
-## (Intercept)  7.6 0.115  7.213  7.987
-## Variable1   -1.2 0.163 -1.748 -0.652
-## Variable2    0.2 0.163 -0.348  0.748
+##              Est    SE df     LL     UL
+## (Intercept)  7.6 0.115  8  7.213  7.987
+## Variable1   -1.2 0.163  8 -1.748 -0.652
+## Variable2    0.2 0.163  8 -0.348  0.748
 ```
 
 ```r
@@ -401,10 +401,10 @@ estimateContrasts(Time1,Time2,Time3,contrasts=contr.treatment)
 ## 
 ## CONFIDENCE INTERVALS FOR THE CONTRASTS
 ## 
-##             Est    SE    LL    UL
-## (Intercept) 6.4 0.200 5.939 6.861
-## Variable2   1.4 0.283 0.748 2.052
-## Variable3   2.2 0.283 1.548 2.852
+##             Est    SE df    LL    UL
+## (Intercept) 6.4 0.200  8 5.939 6.861
+## Variable2   1.4 0.283  8 0.748 2.052
+## Variable3   2.2 0.283  8 1.548 2.852
 ```
 
 ```r
@@ -415,10 +415,10 @@ estimateContrasts(Time1,Time2,Time3,contrasts=contr.poly)
 ## 
 ## CONFIDENCE INTERVALS FOR THE CONTRASTS
 ## 
-##                Est    SE     LL    UL
-## (Intercept)  7.600 0.115  7.334 7.866
-## Variable.L   1.556 0.200  1.094 2.017
-## Variable.Q  -0.245 0.200 -0.706 0.216
+##                Est    SE df     LL    UL
+## (Intercept)  7.600 0.115  8  7.334 7.866
+## Variable.L   1.556 0.200  8  1.094 2.017
+## Variable.Q  -0.245 0.200  8 -0.706 0.216
 ```
 
 ```r
@@ -429,10 +429,10 @@ estimateContrasts(Time1,Time2,Time3,contrasts=contr.helmert)
 ## 
 ## CONFIDENCE INTERVALS FOR THE CONTRASTS
 ## 
-##             Est    SE    LL    UL
-## (Intercept) 7.6 0.115 7.334 7.866
-## Variable1   0.7 0.141 0.374 1.026
-## Variable2   0.5 0.082 0.312 0.688
+##             Est    SE df    LL    UL
+## (Intercept) 7.6 0.115  8 7.334 7.866
+## Variable1   0.7 0.141  8 0.374 1.026
+## Variable2   0.5 0.082  8 0.312 0.688
 ```
 
 ```r
@@ -443,10 +443,10 @@ estimateContrasts(Time1,Time2,Time3,contrasts=contr.SAS)
 ## 
 ## CONFIDENCE INTERVALS FOR THE CONTRASTS
 ## 
-##              Est    SE     LL     UL
-## (Intercept)  8.6 0.200  8.139  9.061
-## Variable1   -2.2 0.283 -2.852 -1.548
-## Variable2   -0.8 0.283 -1.452 -0.148
+##              Est    SE df     LL     UL
+## (Intercept)  8.6 0.200  8  8.139  9.061
+## Variable1   -2.2 0.283  8 -2.852 -1.548
+## Variable2   -0.8 0.283  8 -1.452 -0.148
 ```
 
 #### Plot of the Confidence Intervals for the Set of Contrasts
@@ -499,10 +499,10 @@ testContrasts(Time1,Time2,Time3,contrasts=contr.sum)
 ## 
 ## HYPOTHESIS TESTS FOR THE CONTRASTS
 ## 
-##             Diff    SE      t     p
-## (Intercept)  7.6 0.115 65.818 0.000
-## Variable1   -1.2 0.163 -7.348 0.000
-## Variable2    0.2 0.163  1.225 0.256
+##             Diff    SE      t df     p
+## (Intercept)  7.6 0.115 65.818  8 0.000
+## Variable1   -1.2 0.163 -7.348  8 0.000
+## Variable2    0.2 0.163  1.225  8 0.256
 ```
 
 ```r
@@ -513,10 +513,10 @@ testContrasts(Time1,Time2,Time3,contrasts=contr.treatment)
 ## 
 ## HYPOTHESIS TESTS FOR THE CONTRASTS
 ## 
-##             Diff    SE      t     p
-## (Intercept)  6.4 0.200 32.000 0.000
-## Variable2    1.4 0.283  4.950 0.001
-## Variable3    2.2 0.283  7.778 0.000
+##             Diff    SE      t df     p
+## (Intercept)  6.4 0.200 32.000  8 0.000
+## Variable2    1.4 0.283  4.950  8 0.001
+## Variable3    2.2 0.283  7.778  8 0.000
 ```
 
 ```r
@@ -527,10 +527,10 @@ testContrasts(Time1,Time2,Time3,contrasts=contr.poly)
 ## 
 ## HYPOTHESIS TESTS FOR THE CONTRASTS
 ## 
-##               Diff    SE      t     p
-## (Intercept)  7.600 0.115 65.818 0.000
-## Variable.L   1.556 0.200  7.778 0.000
-## Variable.Q  -0.245 0.200 -1.225 0.256
+##               Diff    SE      t df     p
+## (Intercept)  7.600 0.115 65.818  8 0.000
+## Variable.L   1.556 0.200  7.778  8 0.000
+## Variable.Q  -0.245 0.200 -1.225  8 0.256
 ```
 
 ```r
@@ -541,10 +541,10 @@ testContrasts(Time1,Time2,Time3,contrasts=contr.helmert)
 ## 
 ## HYPOTHESIS TESTS FOR THE CONTRASTS
 ## 
-##             Diff    SE      t     p
-## (Intercept)  7.6 0.115 65.818 0.000
-## Variable1    0.7 0.141  4.950 0.001
-## Variable2    0.5 0.082  6.124 0.000
+##             Diff    SE      t df     p
+## (Intercept)  7.6 0.115 65.818  8 0.000
+## Variable1    0.7 0.141  4.950  8 0.001
+## Variable2    0.5 0.082  6.124  8 0.000
 ```
 
 ```r
@@ -555,8 +555,8 @@ testContrasts(Time1,Time2,Time3,contrasts=contr.SAS)
 ## 
 ## HYPOTHESIS TESTS FOR THE CONTRASTS
 ## 
-##             Diff    SE      t     p
-## (Intercept)  8.6 0.200 43.000 0.000
-## Variable1   -2.2 0.283 -7.778 0.000
-## Variable2   -0.8 0.283 -2.828 0.022
+##             Diff    SE      t df     p
+## (Intercept)  8.6 0.200 43.000  8 0.000
+## Variable1   -2.2 0.283 -7.778  8 0.000
+## Variable2   -0.8 0.283 -2.828  8 0.022
 ```

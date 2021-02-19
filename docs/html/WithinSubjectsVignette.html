@@ -12,7 +12,7 @@
 
 <meta name="author" content="Craig A. Wendorf" />
 
-<meta name="date" content="2021-02-14" />
+<meta name="date" content="2021-02-19" />
 
 <title>Estimation Approach to Statistical Inference</title>
 
@@ -329,7 +329,7 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 
 <h1 class="title toc-ignore">Estimation Approach to Statistical Inference</h1>
 <h4 class="author">Craig A. Wendorf</h4>
-<h4 class="date">2021-02-14</h4>
+<h4 class="date">2021-02-19</h4>
 
 
 
@@ -357,7 +357,7 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 ## 5     8     9     9</code></pre>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">plotBoxes</span>(Time1,Time2,Time3)</span>
 <span id="cb4-2"><a href="#cb4-2"></a><span class="kw">addData</span>(Time1,Time2,Time3)</span></code></pre></div>
-<p><img src="data:image/png;base64,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X7UqKjmBvd2ETuuOknZ3OP3okXgOupdaFjVNt1i111LqMVCO4veST6+D9vRI6BOBQhqBQpq3gSIMBAppBApp3gbKr0IYCBTSCBTSCBTSCBTSvA0UYSBQSCNQSPM2UH4VwkCgkEagkEagkEagkOZtoAgDgUIagUKat4HyqxAGAoU0AoU0AoU0AoU0bwNFGAgU0ggU0rwNlF+FMBAopBEopBEopBEopHkbKMJAoJBGoJDmbaD8KoSBQCGNQCGNQCGNQCHN20ARBgKFNAKFNG8D5VchDAQKaQQKaQQKaQQKad4GijAQKKQRKKR5Gyi/CmEgUEgjUEgjUEgjUEjzNlCEgUAhjUAhzdtA+VUIQ5v1/DA6NV+nURQdXDlY3HYaPFIcx92PA91qHejk6Db57nz7xW1n8yPFMYX6r22gWZo20y0Xt52NjxTHFLoH2gZ6N7SBTqs7+SjndHCrRWX1dyPQveDtFnQjAt0L7QJNtlnH88Xh0paL6xp97oOWRZlGB5fmQL6mT6lAOYrfB96+DoowECikESikESikESikESikESikESikuQ4UaKSnQHfHo4H7M1TBkQoOqRmPBu7PUAVHKjikZjwauD9DFRyp4JCa8Wjg/gxVcKSCQ2rGo4H7M1TBkQoOqRmPBu7PUAVHKjikZjwauD9DFRyp4JCa8Wjg/gxVcKSCQ2rGo4H7M1TBkQoOCSgQKKQRKKQRKKQRKKQRKKQRKKQRKKQRKKQRKKQRKKQRKKQRKKTpB5qeNtc4+G/dpRusu7/UXXpkZxoNdXZh7lB3ftVdaTapkyg5G2y/9ANN3H2wcZ4eRrXXxtmpTUOdXZh1PrHnqe7ZxkmdmBmd9l3ovgQ6XXPxpp3aNNT0KhQTgcFuGqk9z/vsoudfJZ8CTS7gcDf8m9k7nd4No8iu6Gx3OY1OpwLrfN5gqFbvG6Z5w5ESaCPlubR7SBNjshGamD/cDdPJFAy0bqjz+VhgsI1GOun7N8m/QE/niy/n2bUZ05UtGGjdUNdchWKHGox02v/hnH+Bns/zL+mOcvW1xfrSaKgKx0iNRmp28TVXxNoVvwPNXivxIdDSUCW2n80mtf9ny34HWp488UCLoU40+mw0qcWmtC9eB1q56LJ2oMVQJ1G/azy3aaRpmn1Pq9eBpseY4/RXvu+ZzGwaanEk37eNkzo2Tz9nFz0P1+9A7Ut2iyNj7UAXQ52kz/D6fvWmwUhNpcVT0d74ESiCRaCQRqCQRqCQRqCQRqCQRqCQRqCQRqCQRqCQRqCQRqCQRqCQRqCQRqCQRqCQRqCQRqCQRqCQRqCQRqCQRqCQRqCQRqCQRqCQRqCQRqCQRqCQRqCQRqCQRqCQRqCQRqCQRqCQRqCQRqCQRqCQRqCQRqCQRqCQRqCQRqCQRqCQRqCQRqCQRqCQRqCQRqCQRqCQRqCQRqCQRqCQRqCQRqCQRqCQRqCQRqCQRqCQRqCQRqCQRqCQRqCQRqCQ9n834yd9Sm7Y5AAAAABJRU5ErkJggg==" /><!-- --></p>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAqAAAAHgCAMAAABNUi8GAAAA5FBMVEUAAAAAADoAAGYAOjoAOmYAOpAAZpAAZrY6AAA6ADo6AGY6OgA6Ojo6OmY6ZmY6ZpA6ZrY6kLY6kNtmAABmOgBmOjpmZjpmZmZmZpBmkLZmkNtmtrZmtttmtv+QOgCQZgCQZjqQZmaQkGaQkLaQtpCQtraQttuQtv+Q29uQ2/+ZmZm2ZgC2Zjq2ZpC2kDq2kGa2kJC2tpC2tra2ttu227a229u22/+2/7a2/9u2///T09PbkDrbkGbbtmbbtpDbtrbb27bb29vb2//b/7bb////tmb/25D/27b/29v//7b//9v////+OGb3AAAACXBIWXMAAA7DAAAOwwHHb6hkAAARS0lEQVR4nO3d/UPjRAKH8RRB6i2rK0V3vRNOz5c70j33XM89sS6KUpD2//9/bjJJ81KaNtlOmu90ns8PCKWEcfKQJm03ieaAsKjvAQDrECikESikESikESikESikESikESikESikESikESikESikESikESikESikESikESikESikESikESikESikESikESikESikESikESikESikESikESikESikESikESikEeh8EqUGH71pdP/ZRXR0u3TTv69W3O/lMIqerVlO8kOTaHC5YWArxrXy9+0nAs0DjaKDRqv9caD3Z6t+cpos8rR2MekPNQjUJHq+6kfDQKClQNfkVPI40PHKtNe1l/9Qo0CX77P69+0nAjUdpKv7bhgdJ/+9/iSK3vvs1t5gvmN6NB9NE/81tx++KQLN7zfOtr6/PCk/Ho8XZeX3S2r8+iw6eJN/++DK3PSvl2a5tsCZ+Wzw7HZpYL+dRXZg1+a/0dPL4vflN+wzAs0DvR7aLWi23UoanCTbVPPhPIsiLS4LtLhf3lplP2ERaHV52WfzpR+yP/Uwsp8eXi0NzNxufmaaDyD70eKGfUagpUfSo3Szaf5j00xSHHxtv06iMFu+t8m2LA20fD/7kGsyOr5N7nGaLzdpp3w/8/Hozfwm/fbiIT65KV/Mm+T+xQKy2JNPzG99/zb77jjbsuc37DECLR2LfD7P9+/S/5jVn22ixnY7am9OAy3fz34w9z38sbrcwWV1eenGOJMHem63kafph1KW5UDTzeRvr57YR/t8H3Rxwx4j0OpB0mIHc5J3mW6h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" /><!-- --></p>
 </div>
 <div id="descriptive-statistics" class="section level4">
 <h4>Descriptive Statistics</h4>
@@ -553,50 +553,50 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <pre><code>## 
 ## CONFIDENCE INTERVALS FOR THE CONTRASTS
 ## 
-##              Est    SE     LL     UL
-## (Intercept)  7.6 0.115  7.334  7.866
-## Variable1   -1.2 0.163 -1.577 -0.823
-## Variable2    0.2 0.163 -0.177  0.577</code></pre>
+##              Est    SE df     LL     UL
+## (Intercept)  7.6 0.115  8  7.334  7.866
+## Variable1   -1.2 0.163  8 -1.577 -0.823
+## Variable2    0.2 0.163  8 -0.177  0.577</code></pre>
 <div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1"></a><span class="kw">estimateContrasts</span>(Time1,Time2,Time3,<span class="dt">contrasts=</span>contr.sum,<span class="dt">conf.level=</span>.<span class="dv">99</span>)</span></code></pre></div>
 <pre><code>## 
 ## CONFIDENCE INTERVALS FOR THE CONTRASTS
 ## 
-##              Est    SE     LL     UL
-## (Intercept)  7.6 0.115  7.213  7.987
-## Variable1   -1.2 0.163 -1.748 -0.652
-## Variable2    0.2 0.163 -0.348  0.748</code></pre>
+##              Est    SE df     LL     UL
+## (Intercept)  7.6 0.115  8  7.213  7.987
+## Variable1   -1.2 0.163  8 -1.748 -0.652
+## Variable2    0.2 0.163  8 -0.348  0.748</code></pre>
 <div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1"></a><span class="kw">estimateContrasts</span>(Time1,Time2,Time3,<span class="dt">contrasts=</span>contr.treatment)</span></code></pre></div>
 <pre><code>## 
 ## CONFIDENCE INTERVALS FOR THE CONTRASTS
 ## 
-##             Est    SE    LL    UL
-## (Intercept) 6.4 0.200 5.939 6.861
-## Variable2   1.4 0.283 0.748 2.052
-## Variable3   2.2 0.283 1.548 2.852</code></pre>
+##             Est    SE df    LL    UL
+## (Intercept) 6.4 0.200  8 5.939 6.861
+## Variable2   1.4 0.283  8 0.748 2.052
+## Variable3   2.2 0.283  8 1.548 2.852</code></pre>
 <div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1"></a><span class="kw">estimateContrasts</span>(Time1,Time2,Time3,<span class="dt">contrasts=</span>contr.poly)</span></code></pre></div>
 <pre><code>## 
 ## CONFIDENCE INTERVALS FOR THE CONTRASTS
 ## 
-##                Est    SE     LL    UL
-## (Intercept)  7.600 0.115  7.334 7.866
-## Variable.L   1.556 0.200  1.094 2.017
-## Variable.Q  -0.245 0.200 -0.706 0.216</code></pre>
+##                Est    SE df     LL    UL
+## (Intercept)  7.600 0.115  8  7.334 7.866
+## Variable.L   1.556 0.200  8  1.094 2.017
+## Variable.Q  -0.245 0.200  8 -0.706 0.216</code></pre>
 <div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1"></a><span class="kw">estimateContrasts</span>(Time1,Time2,Time3,<span class="dt">contrasts=</span>contr.helmert)</span></code></pre></div>
 <pre><code>## 
 ## CONFIDENCE INTERVALS FOR THE CONTRASTS
 ## 
-##             Est    SE    LL    UL
-## (Intercept) 7.6 0.115 7.334 7.866
-## Variable1   0.7 0.141 0.374 1.026
-## Variable2   0.5 0.082 0.312 0.688</code></pre>
+##             Est    SE df    LL    UL
+## (Intercept) 7.6 0.115  8 7.334 7.866
+## Variable1   0.7 0.141  8 0.374 1.026
+## Variable2   0.5 0.082  8 0.312 0.688</code></pre>
 <div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1"></a><span class="kw">estimateContrasts</span>(Time1,Time2,Time3,<span class="dt">contrasts=</span>contr.SAS)</span></code></pre></div>
 <pre><code>## 
 ## CONFIDENCE INTERVALS FOR THE CONTRASTS
 ## 
-##              Est    SE     LL     UL
-## (Intercept)  8.6 0.200  8.139  9.061
-## Variable1   -2.2 0.283 -2.852 -1.548
-## Variable2   -0.8 0.283 -1.452 -0.148</code></pre>
+##              Est    SE df     LL     UL
+## (Intercept)  8.6 0.200  8  8.139  9.061
+## Variable1   -2.2 0.283  8 -2.852 -1.548
+## Variable2   -0.8 0.283  8 -1.452 -0.148</code></pre>
 </div>
 <div id="plot-of-the-confidence-intervals-for-the-set-of-contrasts" class="section level4">
 <h4>Plot of the Confidence Intervals for the Set of Contrasts</h4>
@@ -619,42 +619,42 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <pre><code>## 
 ## HYPOTHESIS TESTS FOR THE CONTRASTS
 ## 
-##             Diff    SE      t     p
-## (Intercept)  7.6 0.115 65.818 0.000
-## Variable1   -1.2 0.163 -7.348 0.000
-## Variable2    0.2 0.163  1.225 0.256</code></pre>
+##             Diff    SE      t df     p
+## (Intercept)  7.6 0.115 65.818  8 0.000
+## Variable1   -1.2 0.163 -7.348  8 0.000
+## Variable2    0.2 0.163  1.225  8 0.256</code></pre>
 <div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1"></a><span class="kw">testContrasts</span>(Time1,Time2,Time3,<span class="dt">contrasts=</span>contr.treatment)</span></code></pre></div>
 <pre><code>## 
 ## HYPOTHESIS TESTS FOR THE CONTRASTS
 ## 
-##             Diff    SE      t     p
-## (Intercept)  6.4 0.200 32.000 0.000
-## Variable2    1.4 0.283  4.950 0.001
-## Variable3    2.2 0.283  7.778 0.000</code></pre>
+##             Diff    SE      t df     p
+## (Intercept)  6.4 0.200 32.000  8 0.000
+## Variable2    1.4 0.283  4.950  8 0.001
+## Variable3    2.2 0.283  7.778  8 0.000</code></pre>
 <div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1"></a><span class="kw">testContrasts</span>(Time1,Time2,Time3,<span class="dt">contrasts=</span>contr.poly)</span></code></pre></div>
 <pre><code>## 
 ## HYPOTHESIS TESTS FOR THE CONTRASTS
 ## 
-##               Diff    SE      t     p
-## (Intercept)  7.600 0.115 65.818 0.000
-## Variable.L   1.556 0.200  7.778 0.000
-## Variable.Q  -0.245 0.200 -1.225 0.256</code></pre>
+##               Diff    SE      t df     p
+## (Intercept)  7.600 0.115 65.818  8 0.000
+## Variable.L   1.556 0.200  7.778  8 0.000
+## Variable.Q  -0.245 0.200 -1.225  8 0.256</code></pre>
 <div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1"></a><span class="kw">testContrasts</span>(Time1,Time2,Time3,<span class="dt">contrasts=</span>contr.helmert)</span></code></pre></div>
 <pre><code>## 
 ## HYPOTHESIS TESTS FOR THE CONTRASTS
 ## 
-##             Diff    SE      t     p
-## (Intercept)  7.6 0.115 65.818 0.000
-## Variable1    0.7 0.141  4.950 0.001
-## Variable2    0.5 0.082  6.124 0.000</code></pre>
+##             Diff    SE      t df     p
+## (Intercept)  7.6 0.115 65.818  8 0.000
+## Variable1    0.7 0.141  4.950  8 0.001
+## Variable2    0.5 0.082  6.124  8 0.000</code></pre>
 <div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1"></a><span class="kw">testContrasts</span>(Time1,Time2,Time3,<span class="dt">contrasts=</span>contr.SAS)</span></code></pre></div>
 <pre><code>## 
 ## HYPOTHESIS TESTS FOR THE CONTRASTS
 ## 
-##             Diff    SE      t     p
-## (Intercept)  8.6 0.200 43.000 0.000
-## Variable1   -2.2 0.283 -7.778 0.000
-## Variable2   -0.8 0.283 -2.828 0.022</code></pre>
+##             Diff    SE      t df     p
+## (Intercept)  8.6 0.200 43.000  8 0.000
+## Variable1   -2.2 0.283 -7.778  8 0.000
+## Variable2   -0.8 0.283 -2.828  8 0.022</code></pre>
 </div>
 </div>
 </div>
