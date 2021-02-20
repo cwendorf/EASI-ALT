@@ -5,49 +5,49 @@
 
 #### Data Entry
 
-Pred1 <- c(5,6,6,7,7,7,8,8,9)
-Pred2 <- c(6,7,8,8,7,9,7,9,9)
-Outcome <- c(72,69,75,84,72,81,75,84,81)
-RegressionData <- data.frame(Pred1,Pred2,Outcome)
+Predictor1 <- c(0,0,3,5)
+Predictor2 <- c(4,7,4,9)
+Criterion <- c(9,6,4,9)
+RegressionData <- data.frame(Predictor1,Predictor2,Criterion)
 
 ### Inspect Data
 
 RegressionData
-plotBoxes(Pred1,Pred2)
-addData(Pred1,Pred2)
-plotBoxes(Outcome)
-addData(Outcome)
+plotBoxes(Predictor1,Predictor2)
+addData(Predictor1,Predictor2)
+plotBoxes(Criterion)
+addData(Criterion)
 
 #### Descriptive Statistics
 
-describeMeans(Pred1,Pred2,Outcome)
+describeMeans(Predictor1,Predictor2,Criterion)
 
 ### Analyses of a Regression Model
 
 #### Describe the Regression Model
 
-describeModel(Outcome~Pred1+Pred2)
+describeModel(Criterion~Predictor1+Predictor2)
 
 #### Overall Fit of the Regression Model
 
-fitModel(Outcome~Pred1+Pred2)
+fitModel(Criterion~Predictor1+Predictor2)
 
 #### Significance Test of the Regression Model
 
-testModel(Outcome~Pred1+Pred2)
+testModel(Criterion~Predictor1+Predictor2)
 
 ### Analyses of the Regression Coefficients
 
 #### Confidence Intervals for the Regression Coefficients
 
-estimateRegression(Outcome~Pred1+Pred2)
-estimateRegression(Outcome~Pred1+Pred2,conf.level=.99)
+estimateRegression(Criterion~Predictor1+Predictor2)
+estimateRegression(Criterion~Predictor1+Predictor2,conf.level=.99)
 
 #### Plot of the Confidence Intervals for the Regression Coefficients
 
-plotRegression(Outcome~Pred1+Pred2)
-plotRegression(Outcome~Pred1+Pred2,conf.level=.99)
+plotRegression(Criterion~Predictor1+Predictor2)
+plotRegression(Criterion~Predictor1+Predictor2,conf.level=.99)
 
 #### Significance Tests for the Regression Coefficients
 
-testRegression(Outcome~Pred1+Pred2)
+testRegression(Criterion~Predictor1+Predictor2)

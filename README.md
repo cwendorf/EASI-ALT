@@ -34,8 +34,8 @@ source("http://raw.githubusercontent.com/cwendorf/EASIalt/main/sourceEASIalt.R")
 
 The following vignettes are offered as tutorials. They show both the default output and the available options for estimation, confidence interval plots, and significance tests.
 
-- The [_BetweenSubjectsVignette_](./docs/BetweenSubjectsVignette.md) analyzes data from a one-way between-subjects design.  
-- The [_WithinSubjectsVignette_](./docs/WithinSubjectsVignette.md) analyzes data from a single-factor within-subjects design.  
+- The [_OneWayVignette_](./docs/OneWayVignette.md) analyzes data from a one-way between-subjects design.  
+- The [_RepeatedVignette_](./docs/RepeatedVignette.md) analyzes data from a single-factor within-subjects design.  
 - The [_RegressionVignette_](./docs/RegressionVignette.md) analyzes data from a multiple-variable design. 
 
 ### Contact Me
