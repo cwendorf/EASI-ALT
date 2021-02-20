@@ -10,9 +10,10 @@
   model <- lm(formula)
   summ <- summary(model)
   desc <- summ$coef[,c(1,2)]
+  df <- model$df.residual
   ci <- confint(model,level=conf.level)
-  results <- cbind(desc,ci)
-  colnames(results) <- c("Est","SE","LL","UL")
+  results <- cbind(desc,df,ci)
+  colnames(results) <- c("Est","SE","df","LL","UL")
   round(results,3)
 }
 
@@ -30,8 +31,11 @@ estimateRegression <- function(...){
 .nhstRegression.formula <- function(formula,...) {
   model <- lm(formula)
   summ <- summary(model)
-  results <- summ$coef
-  colnames(results)=c("Est","SE","t","p")
+  desc <- summ$coef[,c(1,2,3)]
+  df <- model$df.residual
+  inf <- summ$coef[,4]
+  results <- cbind(desc,df,inf)  
+  colnames(results)=c("Est","SE","t","df","p")
   round(results,3)
 }
 
@@ -50,6 +54,6 @@ plotRegression.formula <- function(formula,mu=NULL,conf.level=.95,...) {
   main <- "Regression Coefficients"
   ylab <- "Unstandardized Coefficient"
   xlab <- ""
-  results <- .ciRegression(formula,conf.level=conf.level,...)[,c(1,3,4)]
+  results <- .ciRegression(formula,conf.level=conf.level,...)[,c(1,4,5)]
   .ciPlot(results,main,ylab,xlab,mu)
 }
