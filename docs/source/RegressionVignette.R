@@ -1,5 +1,5 @@
 # Estimation Approach to Statistical Inference
-## Multiple Regression Vignette
+## Regression Vignette
 
 ### Data Management
 

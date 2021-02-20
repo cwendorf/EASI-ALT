@@ -1,5 +1,5 @@
 # Estimation Approach to Statistical Inference
-## Within Subjects Vignette
+## Repeated Vignette
 
 ### Data Management
 

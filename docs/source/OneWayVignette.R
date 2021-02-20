@@ -1,5 +1,5 @@
 # Estimation Approach to Statistical Inference
-## Between Subjects Vignette
+## Between Vignette
 
 ### Data Management
 

@@ -6,7 +6,7 @@ output:
   rmarkdown::html_vignette:
     keep_md: TRUE
 vignette: >
-  %\VignetteIndexEntry{Multiple Regression Vignette}
+  %\VignetteIndexEntry{Regression Vignette}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -16,7 +16,7 @@ vignette: >
 
 
 # Estimation Approach to Statistical Inference
-## Multiple Regression Vignette
+## Regression Vignette
 
 ### Data Management
 
