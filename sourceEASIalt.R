@@ -1,7 +1,6 @@
 # Estimation Approach to Statistical Inference
 ## Source All Available Functions
 
-source("http://raw.githubusercontent.com/cwendorf/EASIalt/main/R/xBasic.R")
 source("http://raw.githubusercontent.com/cwendorf/EASIalt/main/R/xData.R")
 source("http://raw.githubusercontent.com/cwendorf/EASIalt/main/R/xBoxes.R")
 source("http://raw.githubusercontent.com/cwendorf/EASIalt/main/R/xModel.R")
