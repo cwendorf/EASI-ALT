@@ -5,7 +5,7 @@
 
 .ciContrasts <- function(x,...) 
   UseMethod(".ciContrasts")
-
+  
 .ciContrasts.default <- function(...,contrasts=contr.sum,conf.level=.95){
   data <- data.frame(...)
   columns <- dim(data)[2]
