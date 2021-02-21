@@ -62,6 +62,14 @@ S3method(plotPairwise,default)
 S3method(plotPairwise,formula)
 export(plotPairwise)
 
+### xCorrelation
+
+export(estimateCorrelation)
+export(testCorrelation)
+
+S3method(plotCorrelation,default)
+export(plotCorrelation)
+
 ### xRegression
 
 export(estimateRegression)
