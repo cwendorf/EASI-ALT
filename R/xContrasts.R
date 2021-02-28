@@ -45,14 +45,14 @@ estimateContrasts <- function(...){
 .nhstContrasts <- function(x,...) 
   UseMethod(".nhstContrasts")
 
-.nhstContrasts.default <- function(...,contrasts=contr.sum){
+.nhstContrasts.default <- function(...,contrasts=NULL){
   data <- data.frame(...)
   columns <- dim(data)[2]
   dataLong <- reshape(data,varying=1:columns,v.names="Outcome",timevar="Variable",idvar="Subjects",direction="long")
   dataLong$Subjects <- as.factor(dataLong$Subjects)
   dataLong$Variable <- as.factor(dataLong$Variable)
   vlevels <- nlevels(dataLong$Variable)
-  contrasts(dataLong$Variable) <- contrasts
+  if(!is.null(contrasts)) {contrasts(dataLong$Variable)=contrasts}
   contrasts(dataLong$Subjects) <- contr.sum
   model <- aov(Outcome~Variable+Error(Subjects),data=dataLong)
   df <- lm(model)$df.residual
@@ -61,10 +61,10 @@ estimateContrasts <- function(...){
   round(results,3)
 }
 
-.nhstContrasts.formula <- function(formula,contrasts=contr.sum,...){
+.nhstContrasts.formula <- function(formula,contrasts=NULL,...){
   x <- eval(formula[[3]])
   y <- eval(formula[[2]])
-  contrasts(x) <- contrasts
+  if(!is.null(contrasts)) {contrasts(x)=contrasts}
   model <- lm(y~x,...)
   df <- lm(model)$df.residual  
   results <- cbind(summary(lm(model))[[4]][,1:3],df,summary(lm(model))[[4]][,4])
