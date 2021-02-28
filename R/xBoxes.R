@@ -9,9 +9,8 @@
 .fnsBoxes.default <- function(...) {
   data <- data.frame(...)
   results <- do.call(rbind,lapply(data,function(x) boxplot.stats(x)$stats))
-  results <- round(results,3)
   colnames(results) <- c("Min","LQ","Mdn","UQ","Max")
-  results
+  round(results,3)
 }
 
 .fnsBoxes.formula <- function(formula,...) {
@@ -20,7 +19,12 @@
   results <- results[[2]]
   rownames(results) <- rn
   colnames(results) <- c("Min","LQ","Mdn","UQ","Max")
-  results
+  round(results,3)
+}
+
+.fnsBoxes.lm <- function(object,...) {
+  formula <- object$terms
+  .fnsBoxes(formula,...)
 }
 
 describeBoxes <- function(...){
