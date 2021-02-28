@@ -27,6 +27,11 @@
   round(results,3)
 }
 
+.dsMeans.lm <- function(object,...) {
+  formula <- object$terms
+  .dsMeans(formula,...)
+}
+
 describeMeans <- function(...){
   cat("\nDESCRIPTIVE STATISTICS FOR THE DATA\n\n")
   print(.dsMeans(...))
@@ -59,6 +64,11 @@ describeMeans <- function(...){
   colnames(results) <- c("M","SE","df","LL","UL")
   rownames(results) <- levels(x)
   round(results,3)
+}
+
+.ciMeans.lm <- function(object,conf.level=.95,...) {
+  formula <- object$terms
+  .ciMeans(formula,conf.level=conf.level,...)
 }
 
 estimateMeans <- function(...) {
@@ -101,6 +111,11 @@ estimateMeans <- function(...) {
   colnames(results) <- c("Diff","SE","t","df","p")
   rownames(results) <- levels(x)
   round(results,3)
+}
+
+.nhstMeans.lm <- function(object,mu=0,...) {
+  formula <- object$terms
+  .nhstMeans(formula,mu=mu,...)
 }
 
 testMeans <- function(...) {
