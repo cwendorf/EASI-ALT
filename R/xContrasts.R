@@ -6,14 +6,14 @@
 .ciContrasts <- function(x,...) 
   UseMethod(".ciContrasts")
   
-.ciContrasts.default <- function(...,contrasts=contr.sum,conf.level=.95){
+.ciContrasts.default <- function(...,contrasts=NULL,conf.level=.95){
   data <- data.frame(...)
   columns <- dim(data)[2]
   dataLong <- reshape(data,varying=1:columns,v.names="Outcome",timevar="Variable",idvar="Subjects",direction="long")
   dataLong$Subjects <- as.factor(dataLong$Subjects)
   dataLong$Variable <- as.factor(dataLong$Variable)
   vlevels <- nlevels(dataLong$Variable)
-  contrasts(dataLong$Variable) <- contrasts
+  if(!is.null(contrasts)) {contrasts(dataLong$Variable)=contrasts}
   contrasts(dataLong$Subjects) <- contr.sum
   model <- aov(Outcome~Variable+Error(Subjects),data=dataLong)
   first <- summary(lm(model))[[4]][1:vlevels,1:2]
@@ -24,10 +24,10 @@
   round(results,3)
 }
 
-.ciContrasts.formula <- function(formula,contrasts=contr.sum,conf.level=.95,...){
+.ciContrasts.formula <- function(formula,contrasts=NULL,conf.level=.95,...){
   x <- eval(formula[[3]])
   y <- eval(formula[[2]])
-  contrasts(x) <- contrasts
+  if(!is.null(contrasts)) {contrasts(x)=contrasts}
   model <- lm(y~x,...)
   results <- cbind(summary(model)[[4]][,1:2],model$df.residual,confint(model,level=conf.level))
   colnames(results) <- c("Est","SE","df","LL","UL")
