@@ -15,7 +15,7 @@
 
 .fnsBoxes.formula <- function(formula,...) {
   results <- aggregate(formula,FUN=.fnsBoxes,...)
-  rn <- results[,1]
+  rn <- results[[1]]
   results <- results[[2]]
   rownames(results) <- rn
   colnames(results) <- c("Min","LQ","Mdn","UQ","Max")
