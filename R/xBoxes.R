@@ -14,7 +14,7 @@
 }
 
 .fnsBoxes.formula <- function(formula,...) {
-  results <- aggregate(formula,FUN=.fnsBoxes,...)
+  results <- aggregate(formula,FUN=.fnsBoxes.default,...)
   rn <- results[[1]]
   results <- results[[2]]
   rownames(results) <- rn
@@ -27,7 +27,7 @@
   .fnsBoxes(formula,...)
 }
 
-describeBoxes <- function(...){
+describeBoxes <- function(...) {
   cat("\nBOX PLOT SUMMARIES FOR THE DATA\n\n")
   print(.fnsBoxes(...))
   cat("\n")
