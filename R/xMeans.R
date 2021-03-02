@@ -32,7 +32,7 @@
   .dsMeans(formula,...)
 }
 
-describeMeans <- function(...){
+describeMeans <- function(...) {
   cat("\nDESCRIPTIVE STATISTICS FOR THE DATA\n\n")
   print(.dsMeans(...))
   cat("\n")
