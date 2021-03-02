@@ -27,7 +27,7 @@
   .fnsBoxes(formula,...)
 }
 
-describeBoxes <- function(...) {
+describeBoxes <- dB <- function(...) {
   cat("\nBOX PLOT SUMMARIES FOR THE DATA\n\n")
   print(.fnsBoxes(...))
   cat("\n")
