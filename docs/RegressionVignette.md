@@ -18,7 +18,7 @@ vignette: >
 # Estimation Approach to Statistical Inference
 ## Regression Vignette
 
-## Contents
+### Contents
 
 - [Data Management](#data-management)
 - [Analyses of a Regression Model](#analyses-of-a-regression-model)

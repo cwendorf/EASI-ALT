@@ -23,7 +23,7 @@ library(EASIalt)
 # Estimation Approach to Statistical Inference
 ## OneWay Vignette
 
-## Contents
+### Contents
 
 - [Data Management](#data-management)
 - [Analyses of a Model](#analyses-of-a-model)
