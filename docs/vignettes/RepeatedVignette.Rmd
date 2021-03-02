@@ -23,6 +23,15 @@ library(EASIalt)
 # Estimation Approach to Statistical Inference
 ## Repeated Vignette
 
+## Contents
+
+- [Data Management](#data-management)
+- [Analyses of a Model](#analyses-of-a-model)
+- [Analyses of the Variable Means](#analyses-of-the-variable-means)
+- [Analyses of a Variable Comparison](#analyses-of-a-variable-comparison)
+- [Analyses of Pairwise Comparisons](#analyses-of-pairwise-comparisons)
+- [Analyses of a Set of Contrasts](#analyses-of-a-set-of-contrasts)
+
 ### Data Management
 
 #### Data Entry
@@ -38,6 +47,7 @@ RepeatedData <- data.frame(Outcome1,Outcome2,Outcome3)
 
 ```{r,Repeated-Data}
 RepeatedData
+describeBoxes(Outcome1,Outcome2,Outcome3)
 plotBoxes(Outcome1,Outcome2,Outcome3)
 addData(Outcome1,Outcome2,Outcome3)
 ```

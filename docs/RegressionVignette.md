@@ -1,7 +1,7 @@
 ---
 title: "Estimation Approach to Statistical Inference"
 author: "Craig A. Wendorf"
-date: "2021-02-20"
+date: "2021-03-01"
 output: 
   rmarkdown::html_vignette:
     keep_md: TRUE
@@ -17,6 +17,12 @@ vignette: >
 
 # Estimation Approach to Statistical Inference
 ## Regression Vignette
+
+## Contents
+
+- [Data Management](#data-management)
+- [Analyses of a Regression Model](#analyses-of-a-regression-model)
+- [Analyses of the Regression Coefficients](#analyses-of-the-regression-coefficients)
 
 ### Data Management
 
@@ -46,11 +52,36 @@ RegressionData
 ```
 
 ```r
+describeBoxes(Predictor1,Predictor2)
+```
+
+```
+## 
+## BOX PLOT SUMMARIES FOR THE DATA
+## 
+##            Min LQ Mdn UQ Max
+## Predictor1   0  0 1.5  4   5
+## Predictor2   4  4 5.5  8   9
+```
+
+```r
 plotBoxes(Predictor1,Predictor2)
 addData(Predictor1,Predictor2)
 ```
 
 ![](figures/Regression-Data-1.png)<!-- -->
+
+```r
+describeBoxes(Criterion)
+```
+
+```
+## 
+## BOX PLOT SUMMARIES FOR THE DATA
+## 
+##           Min LQ Mdn UQ Max
+## Criterion   4  5 7.5  9   9
+```
 
 ```r
 plotBoxes(Criterion)

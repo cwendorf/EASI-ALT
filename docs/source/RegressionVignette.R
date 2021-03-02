@@ -13,8 +13,10 @@ RegressionData <- data.frame(Predictor1,Predictor2,Criterion)
 ### Inspect Data
 
 RegressionData
+describeBoxes(Predictor1,Predictor2)
 plotBoxes(Predictor1,Predictor2)
 addData(Predictor1,Predictor2)
+describeBoxes(Criterion)
 plotBoxes(Criterion)
 addData(Criterion)
 

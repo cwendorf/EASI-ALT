@@ -13,6 +13,7 @@ RepeatedData <- data.frame(Outcome1,Outcome2,Outcome3)
 ### Inspect Data
 
 RepeatedData
+describeBoxes(Outcome1,Outcome2,Outcome3)
 plotBoxes(Outcome1,Outcome2,Outcome3)
 addData(Outcome1,Outcome2,Outcome3)
 

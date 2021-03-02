@@ -1,7 +1,7 @@
 ---
 title: "Estimation Approach to Statistical Inference"
 author: "Craig A. Wendorf"
-date: "2021-02-20"
+date: "2021-03-01"
 output: 
   rmarkdown::html_vignette:
     keep_md: TRUE
@@ -17,6 +17,15 @@ vignette: >
 
 # Estimation Approach to Statistical Inference
 ## OneWay Vignette
+
+## Contents
+
+- [Data Management](#data-management)
+- [Analyses of a Model](#analyses-of-a-model)
+- [Analyses of the Factor Means](#analyses-of-the-factor-means)
+- [Analyses of a Factor Comparison](#analyses-of-a-factor-comparison)
+- [Analyses of Pairwise Comparisons](#analyses-of-pairwise-comparisons)
+- [Analyses of a Set of Contrasts](#analyses-of-a-set-of-contrasts)
 
 ### Data Management
 
@@ -51,6 +60,20 @@ OneWayData
 ## 10 Level3       6
 ## 11 Level3       4
 ## 12 Level3       9
+```
+
+```r
+describeBoxes(Outcome~Factor)
+```
+
+```
+## 
+## BOX PLOT SUMMARIES FOR THE DATA
+## 
+##        Min LQ Mdn UQ Max
+## Level1   0  0 1.5  4   5
+## Level2   4  4 5.5  8   9
+## Level3   4  5 7.5  9   9
 ```
 
 ```r

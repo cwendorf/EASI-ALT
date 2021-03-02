@@ -13,6 +13,7 @@ OneWayData <- data.frame(Factor,Outcome)
 #### Inspect Data
 
 OneWayData
+describeBoxes(Outcome~Factor)
 plotBoxes(Outcome~Factor)
 addData(Outcome~Factor)
 

@@ -23,6 +23,15 @@ library(EASIalt)
 # Estimation Approach to Statistical Inference
 ## OneWay Vignette
 
+## Contents
+
+- [Data Management](#data-management)
+- [Analyses of a Model](#analyses-of-a-model)
+- [Analyses of the Factor Means](#analyses-of-the-factor-means)
+- [Analyses of a Factor Comparison](#analyses-of-a-factor-comparison)
+- [Analyses of Pairwise Comparisons](#analyses-of-pairwise-comparisons)
+- [Analyses of a Set of Contrasts](#analyses-of-a-set-of-contrasts)
+
 ### Data Management
 
 #### Data Entry
@@ -38,6 +47,7 @@ OneWayData <- data.frame(Factor,Outcome)
 
 ```{r,OneWay-Data}
 OneWayData
+describeBoxes(Outcome~Factor)
 plotBoxes(Outcome~Factor)
 addData(Outcome~Factor)
 ```

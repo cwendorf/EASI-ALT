@@ -23,6 +23,12 @@ library(EASIalt)
 # Estimation Approach to Statistical Inference
 ## Regression Vignette
 
+## Contents
+
+- [Data Management](#data-management)
+- [Analyses of a Regression Model](#analyses-of-a-regression-model)
+- [Analyses of the Regression Coefficients](#analyses-of-the-regression-coefficients)
+
 ### Data Management
 
 #### Data Entry
@@ -38,8 +44,10 @@ RegressionData <- data.frame(Predictor1,Predictor2,Criterion)
 
 ```{r,Regression-Data}
 RegressionData
+describeBoxes(Predictor1,Predictor2)
 plotBoxes(Predictor1,Predictor2)
 addData(Predictor1,Predictor2)
+describeBoxes(Criterion)
 plotBoxes(Criterion)
 addData(Criterion)
 ```

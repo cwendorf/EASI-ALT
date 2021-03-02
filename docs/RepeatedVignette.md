@@ -1,7 +1,7 @@
 ---
 title: "Estimation Approach to Statistical Inference"
 author: "Craig A. Wendorf"
-date: "2021-02-20"
+date: "2021-03-01"
 output: 
   rmarkdown::html_vignette:
     keep_md: TRUE
@@ -17,6 +17,15 @@ vignette: >
 
 # Estimation Approach to Statistical Inference
 ## Repeated Vignette
+
+## Contents
+
+- [Data Management](#data-management)
+- [Analyses of a Model](#analyses-of-a-model)
+- [Analyses of the Variable Means](#analyses-of-the-variable-means)
+- [Analyses of a Variable Comparison](#analyses-of-a-variable-comparison)
+- [Analyses of Pairwise Comparisons](#analyses-of-pairwise-comparisons)
+- [Analyses of a Set of Contrasts](#analyses-of-a-set-of-contrasts)
 
 ### Data Management
 
@@ -43,6 +52,20 @@ RepeatedData
 ## 2        0        7        6
 ## 3        3        4        4
 ## 4        5        9        9
+```
+
+```r
+describeBoxes(Outcome1,Outcome2,Outcome3)
+```
+
+```
+## 
+## BOX PLOT SUMMARIES FOR THE DATA
+## 
+##          Min LQ Mdn UQ Max
+## Outcome1   0  0 1.5  4   5
+## Outcome2   4  4 5.5  8   9
+## Outcome3   4  5 7.5  9   9
 ```
 
 ```r
