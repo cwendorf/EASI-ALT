@@ -99,6 +99,10 @@ estimateContrasts(Outcome1,Outcome2,Outcome3,contrasts=contr.poly)
 estimateContrasts(Outcome1,Outcome2,Outcome3,contrasts=contr.helmert)
 estimateContrasts(Outcome1,Outcome2,Outcome3,contrasts=contr.SAS)
 
+c1=c(1,-1,0)
+c2=c(1,1,-2)
+estimateContrasts(Outcome1,Outcome2,Outcome3,contrasts=cbind(c1,c2))
+
 #### Plot of the Confidence Intervals for the Set of Contrasts
 
 plotContrasts(Outcome1,Outcome2,Outcome3,contrasts=contr.sum)
@@ -109,6 +113,10 @@ plotContrasts(Outcome1,Outcome2,Outcome3,contrasts=contr.poly)
 plotContrasts(Outcome1,Outcome2,Outcome3,contrasts=contr.helmert)
 plotContrasts(Outcome1,Outcome2,Outcome3,contrasts=contr.SAS)
 
+c1=c(1,-1,0)
+c2=c(1,1,-2)
+plotContrasts(Outcome1,Outcome2,Outcome3,contrasts=cbind(c1,c2))
+
 #### Significance Tests of the Set of Contrasts
 
 testContrasts(Outcome1,Outcome2,Outcome3,contrasts=contr.sum)
@@ -116,3 +124,7 @@ testContrasts(Outcome1,Outcome2,Outcome3,contrasts=contr.treatment)
 testContrasts(Outcome1,Outcome2,Outcome3,contrasts=contr.poly)
 testContrasts(Outcome1,Outcome2,Outcome3,contrasts=contr.helmert)
 testContrasts(Outcome1,Outcome2,Outcome3,contrasts=contr.SAS)
+
+c1=c(1,-1,0)
+c2=c(1,1,-2)
+testContrasts(Outcome1,Outcome2,Outcome3,contrasts=cbind(c1,c2))

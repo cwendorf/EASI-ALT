@@ -1,7 +1,7 @@
 ---
 title: "Estimation Approach to Statistical Inference"
 author: "Craig A. Wendorf"
-date: "2021-03-01"
+date: "2021-03-05"
 output: 
   rmarkdown::html_vignette:
     keep_md: TRUE
@@ -481,6 +481,22 @@ estimateContrasts(Outcome~Factor,contrasts=contr.SAS)
 ## x2           -1 1.732  9 -4.918  2.918
 ```
 
+```r
+c1=c(1,-1,0)
+c2=c(1,1,-2)
+estimateContrasts(Outcome~Factor,contrasts=cbind(c1,c2))
+```
+
+```
+## 
+## CONFIDENCE INTERVALS FOR THE CONTRASTS
+## 
+##             Est    SE df     LL     UL
+## (Intercept)   5 0.707  9  3.400  6.600
+## xc1          -2 0.866  9 -3.959 -0.041
+## xc2          -1 0.500  9 -2.131  0.131
+```
+
 #### Plot of the Confidence Intervals for the Set of Contrasts
 
 
@@ -519,6 +535,14 @@ plotContrasts(Outcome~Factor,contrasts=contr.SAS)
 ```
 
 ![](figures/OneWay-Contrasts-6.png)<!-- -->
+
+```r
+c1=c(1,-1,0)
+c2=c(1,1,-2)
+plotContrasts(Outcome~Factor,contrasts=cbind(c1,c2))
+```
+
+![](figures/OneWay-Contrasts-7.png)<!-- -->
 
 #### Significance Tests of the Set of Contrasts
 
@@ -591,4 +615,20 @@ testContrasts(Outcome~Factor,contrasts=contr.SAS)
 ## (Intercept)    7 1.225  5.715  9 0.000
 ## x1            -5 1.732 -2.887  9 0.018
 ## x2            -1 1.732 -0.577  9 0.578
+```
+
+```r
+c1=c(1,-1,0)
+c2=c(1,1,-2)
+testContrasts(Outcome~Factor,contrasts=cbind(c1,c2))
+```
+
+```
+## 
+## HYPOTHESIS TESTS FOR THE CONTRASTS
+## 
+##             Diff    SE      t df     p
+## (Intercept)    5 0.707  7.071  9 0.000
+## xc1           -2 0.866 -2.309  9 0.046
+## xc2           -1 0.500 -2.000  9 0.077
 ```

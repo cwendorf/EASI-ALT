@@ -1,7 +1,7 @@
 ---
 title: "Estimation Approach to Statistical Inference"
 author: "Craig A. Wendorf"
-date: "2021-03-01"
+date: "2021-03-05"
 output: 
   rmarkdown::html_vignette:
     keep_md: TRUE
@@ -471,6 +471,22 @@ estimateContrasts(Outcome1,Outcome2,Outcome3,contrasts=contr.SAS)
 ## Variable2    -1 1.434  6 -4.508  2.508
 ```
 
+```r
+c1=c(1,-1,0)
+c2=c(1,1,-2)
+estimateContrasts(Outcome1,Outcome2,Outcome3,contrasts=cbind(c1,c2))
+```
+
+```
+## 
+## CONFIDENCE INTERVALS FOR THE CONTRASTS
+## 
+##             Est    SE df     LL     UL
+## (Intercept)   5 0.585  6  3.568  6.432
+## Variablec1   -2 0.717  6 -3.754 -0.246
+## Variablec2   -1 0.414  6 -2.013  0.013
+```
+
 #### Plot of the Confidence Intervals for the Set of Contrasts
 
 
@@ -509,6 +525,14 @@ plotContrasts(Outcome1,Outcome2,Outcome3,contrasts=contr.SAS)
 ```
 
 ![](figures/Repeated-Contrasts-6.png)<!-- -->
+
+```r
+c1=c(1,-1,0)
+c2=c(1,1,-2)
+plotContrasts(Outcome1,Outcome2,Outcome3,contrasts=cbind(c1,c2))
+```
+
+![](figures/Repeated-Contrasts-7.png)<!-- -->
 
 #### Significance Tests of the Set of Contrasts
 
@@ -581,4 +605,20 @@ testContrasts(Outcome1,Outcome2,Outcome3,contrasts=contr.SAS)
 ## (Intercept)    7 1.014  6.905  6 0.000
 ## Variable1     -5 1.434 -3.487  6 0.013
 ## Variable2     -1 1.434 -0.697  6 0.512
+```
+
+```r
+c1=c(1,-1,0)
+c2=c(1,1,-2)
+testContrasts(Outcome1,Outcome2,Outcome3,contrasts=cbind(c1,c2))
+```
+
+```
+## 
+## HYPOTHESIS TESTS FOR THE CONTRASTS
+## 
+##             Diff    SE      t df     p
+## (Intercept)    5 0.585  8.542  6 0.000
+## Variablec1    -2 0.717 -2.790  6 0.032
+## Variablec2    -1 0.414 -2.416  6 0.052
 ```

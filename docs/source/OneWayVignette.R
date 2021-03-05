@@ -1,5 +1,5 @@
 # Estimation Approach to Statistical Inference
-## Between Vignette
+## OneWay Vignette
 
 ### Data Management
 
@@ -102,6 +102,10 @@ estimateContrasts(Outcome~Factor,contrasts=contr.poly)
 estimateContrasts(Outcome~Factor,contrasts=contr.helmert)
 estimateContrasts(Outcome~Factor,contrasts=contr.SAS)
 
+c1=c(1,-1,0)
+c2=c(1,1,-2)
+estimateContrasts(Outcome~Factor,contrasts=cbind(c1,c2))
+
 #### Plot of the Confidence Intervals for the Set of Contrasts
 
 plotContrasts(Outcome~Factor,contrasts=contr.sum)
@@ -112,6 +116,10 @@ plotContrasts(Outcome~Factor,contrasts=contr.poly)
 plotContrasts(Outcome~Factor,contrasts=contr.helmert)
 plotContrasts(Outcome~Factor,contrasts=contr.SAS)
 
+c1=c(1,-1,0)
+c2=c(1,1,-2)
+plotContrasts(Outcome~Factor,contrasts=cbind(c1,c2))
+
 #### Significance Tests of the Set of Contrasts
 
 testContrasts(Outcome~Factor,contrasts=contr.sum)
@@ -119,3 +127,7 @@ testContrasts(Outcome~Factor,contrasts=contr.treatment)
 testContrasts(Outcome~Factor,contrasts=contr.poly)
 testContrasts(Outcome~Factor,contrasts=contr.helmert)
 testContrasts(Outcome~Factor,contrasts=contr.SAS)
+
+c1=c(1,-1,0)
+c2=c(1,1,-2)
+testContrasts(Outcome~Factor,contrasts=cbind(c1,c2))
