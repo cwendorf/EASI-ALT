@@ -27,7 +27,7 @@ library(EASIalt)
 If you do not wish a full install, the latest functions can be sourced directly from GitHub:
 
 ```r
-source("http://raw.githubusercontent.com/cwendorf/EASIalt/main/sourceEASIalt.R")
+source("http://raw.githubusercontent.com/cwendorf/EASIalt/main/source-EASIalt.R")
 ```
 
 ### Usage
